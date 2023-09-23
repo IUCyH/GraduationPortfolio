@@ -23,13 +23,13 @@ public class ColorChangeTest : MonoBehaviour
     void OnMouseEnter()
     {
         ChangeSpriteColor(Color.white);
-        animator.SetBool("SelectingAnimation", true);
+        //animator.SetBool("SelectingAnimation", true);
     }
 
     void OnMouseExit()
     {
         ChangeSpriteColor(Color.gray);
-        animator.SetBool("SelectingAnimation", false);
+        //animator.SetBool("SelectingAnimation", false);
     }
 
     void ChangeSpriteColor(Color color)
