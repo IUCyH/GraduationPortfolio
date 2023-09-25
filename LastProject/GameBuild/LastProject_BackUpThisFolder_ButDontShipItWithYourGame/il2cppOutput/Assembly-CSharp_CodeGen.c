@@ -1,0 +1,261 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void PlayerAnimationState_Start_m80614CD9D48E8117DFEE5CFD52715FB495F477E2 (void);
+extern void PlayerAnimationState_ChangeAnimationState_mCE5CBF8ED4ACBAAE380F30C80B894BD0D88BCF24 (void);
+extern void PlayerAnimationState_Update_m9E3A14A57F2CCBAFE407606C0F2FA05936946AF9 (void);
+extern void PlayerAnimationState__ctor_m837ED07B3411923288A9A3BEC0F5CDAD5586C459 (void);
+extern void PlayerCamera_FixedUpdate_mE9F7E77B35A1F366D177814CA71CAE8A6084C6A2 (void);
+extern void PlayerCamera__ctor_m4C3414C47080390CC33CA4183A49D0E040245091 (void);
+extern void PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3 (void);
+extern void PlayerMovement_FixedUpdate_m05F06EBAEB85F1B860ED042B83AD54F61DC53EFE (void);
+extern void PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA (void);
+extern void SelectingPlayer_get_IsSelected_mDEFEC3F594322032FBB49353C434FA2BE8926081 (void);
+extern void SelectingPlayer_set_IsSelected_m6B52AD2F31099808B5C06C950E1B70FDDAFF395D (void);
+extern void SelectingPlayer_Awake_m996F9010B407D7347AE26AA4133CB95D0B71528B (void);
+extern void SelectingPlayer_OnMouseUp_mE6C966EF831F21E9304B82944D377B1139C1C08A (void);
+extern void SelectingPlayer_OnMouseEnter_m607AC385949D1AEC27F25162BA6A21BCA10C2897 (void);
+extern void SelectingPlayer_OnMouseExit_m58D2729FB5553BD73B02D88660B0B23776D1A61B (void);
+extern void SelectingPlayer_ChangeSpriteColor_m33C6E233B60BAE15C4525DE242C08B19BAB7C76D (void);
+extern void SelectingPlayer_Init_m045C632DD36ECAD1F5DD855410495D48E486836D (void);
+extern void SelectingPlayer_SetPlayerPosToInformationPos_m13D34B67D35B4143A431092805A430EDEA593AD7 (void);
+extern void SelectingPlayer__ctor_m4E1AC2726A9DCFC4EBEA41DC0D5AA99B97E348FD (void);
+extern void ClickAnyWhere_get_Level_mCBA33A7D4C9248DB55AC07444985B2A4ED513AA6 (void);
+extern void ClickAnyWhere_OnPointerClick_mA3FEA0314072E5CB2B9B1ED73032AD825302084A (void);
+extern void ClickAnyWhere_Open_m4B238C615BB9227B6FB335C7C5CB54BE5641C0A7 (void);
+extern void ClickAnyWhere_Close_mC19166F6CB47E78671A13ED6FD412B42866C42C2 (void);
+extern void ClickAnyWhere__ctor_m8112D834026435764B6ADE80795097DDEE5363F4 (void);
+extern void PlayerInformation_get_Level_mB29097FC7095CAB194ABD156AF254740B7AB7865 (void);
+extern void PlayerInformation_Start_mB794909D193D693E01BB110D27586DF18FEC5B76 (void);
+extern void PlayerInformation_Open_m392BE1199185A528C75595DB5B380D3F07552B80 (void);
+extern void PlayerInformation_Close_m6C52D20E13CF52A7F0E5932453DB49931ECA5842 (void);
+extern void PlayerInformation__ctor_mDC6839F2DF23BBCB31E346D8E176A956DA01D046 (void);
+extern void PlayerSelectionController_get_Level_mDF1C4B6148C068A5DF902DB06F364DD4F6AC9813 (void);
+extern void PlayerSelectionController_Start_mD9A6845572DEADEA7BB8C09619996211FC3613AA (void);
+extern void PlayerSelectionController_Open_mDECF394625CB2377D61BEB823BC7364BA6086C32 (void);
+extern void PlayerSelectionController_Close_m2EDCFD1C83F86212636DEB5826FBC0E2F8E8F82B (void);
+extern void PlayerSelectionController__ctor_mD48E8DB05D0C4CAC7AFF98EC1EA565F018BAAEA0 (void);
+extern void TitleManager_OnAwake_m5B1B1C87AD42AF5742D0BB1FB69DAFEC79AB09CC (void);
+extern void TitleManager_GoNextSelectionLevel_mD5AD3853D60A0A17EF9D7DD44D9FDD47C6F36DBE (void);
+extern void TitleManager_GoPrevSelectionLevel_m49044861D9D84A494289BA89699CC1E239F3B3CF (void);
+extern void TitleManager_Update_m8476C9812D046D24B915A2AEB6CD1BB6E7EF50A6 (void);
+extern void TitleManager__ctor_m08406351E7FEB77F80D0A3A7F3FCC58D5CAAE237 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[62] = 
+{
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	PlayerAnimationState_Start_m80614CD9D48E8117DFEE5CFD52715FB495F477E2,
+	PlayerAnimationState_ChangeAnimationState_mCE5CBF8ED4ACBAAE380F30C80B894BD0D88BCF24,
+	PlayerAnimationState_Update_m9E3A14A57F2CCBAFE407606C0F2FA05936946AF9,
+	PlayerAnimationState__ctor_m837ED07B3411923288A9A3BEC0F5CDAD5586C459,
+	PlayerCamera_FixedUpdate_mE9F7E77B35A1F366D177814CA71CAE8A6084C6A2,
+	PlayerCamera__ctor_m4C3414C47080390CC33CA4183A49D0E040245091,
+	PlayerMovement_Update_m5BB6CE35AF68EE00CFEB4BA5EBA17E10667551D3,
+	PlayerMovement_FixedUpdate_m05F06EBAEB85F1B860ED042B83AD54F61DC53EFE,
+	PlayerMovement__ctor_mB37559C5B0638161878D20E00B7C672FC38BBBAA,
+	NULL,
+	NULL,
+	NULL,
+	SelectingPlayer_get_IsSelected_mDEFEC3F594322032FBB49353C434FA2BE8926081,
+	SelectingPlayer_set_IsSelected_m6B52AD2F31099808B5C06C950E1B70FDDAFF395D,
+	SelectingPlayer_Awake_m996F9010B407D7347AE26AA4133CB95D0B71528B,
+	SelectingPlayer_OnMouseUp_mE6C966EF831F21E9304B82944D377B1139C1C08A,
+	SelectingPlayer_OnMouseEnter_m607AC385949D1AEC27F25162BA6A21BCA10C2897,
+	SelectingPlayer_OnMouseExit_m58D2729FB5553BD73B02D88660B0B23776D1A61B,
+	SelectingPlayer_ChangeSpriteColor_m33C6E233B60BAE15C4525DE242C08B19BAB7C76D,
+	SelectingPlayer_Init_m045C632DD36ECAD1F5DD855410495D48E486836D,
+	SelectingPlayer_SetPlayerPosToInformationPos_m13D34B67D35B4143A431092805A430EDEA593AD7,
+	SelectingPlayer__ctor_m4E1AC2726A9DCFC4EBEA41DC0D5AA99B97E348FD,
+	ClickAnyWhere_get_Level_mCBA33A7D4C9248DB55AC07444985B2A4ED513AA6,
+	ClickAnyWhere_OnPointerClick_mA3FEA0314072E5CB2B9B1ED73032AD825302084A,
+	ClickAnyWhere_Open_m4B238C615BB9227B6FB335C7C5CB54BE5641C0A7,
+	ClickAnyWhere_Close_mC19166F6CB47E78671A13ED6FD412B42866C42C2,
+	ClickAnyWhere__ctor_m8112D834026435764B6ADE80795097DDEE5363F4,
+	PlayerInformation_get_Level_mB29097FC7095CAB194ABD156AF254740B7AB7865,
+	PlayerInformation_Start_mB794909D193D693E01BB110D27586DF18FEC5B76,
+	PlayerInformation_Open_m392BE1199185A528C75595DB5B380D3F07552B80,
+	PlayerInformation_Close_m6C52D20E13CF52A7F0E5932453DB49931ECA5842,
+	PlayerInformation__ctor_mDC6839F2DF23BBCB31E346D8E176A956DA01D046,
+	PlayerSelectionController_get_Level_mDF1C4B6148C068A5DF902DB06F364DD4F6AC9813,
+	PlayerSelectionController_Start_mD9A6845572DEADEA7BB8C09619996211FC3613AA,
+	PlayerSelectionController_Open_mDECF394625CB2377D61BEB823BC7364BA6086C32,
+	PlayerSelectionController_Close_m2EDCFD1C83F86212636DEB5826FBC0E2F8E8F82B,
+	PlayerSelectionController__ctor_mD48E8DB05D0C4CAC7AFF98EC1EA565F018BAAEA0,
+	TitleManager_OnAwake_m5B1B1C87AD42AF5742D0BB1FB69DAFEC79AB09CC,
+	TitleManager_GoNextSelectionLevel_mD5AD3853D60A0A17EF9D7DD44D9FDD47C6F36DBE,
+	TitleManager_GoPrevSelectionLevel_m49044861D9D84A494289BA89699CC1E239F3B3CF,
+	TitleManager_Update_m8476C9812D046D24B915A2AEB6CD1BB6E7EF50A6,
+	TitleManager__ctor_m08406351E7FEB77F80D0A3A7F3FCC58D5CAAE237,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[62] = 
+{
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	1995,
+	5409,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	0,
+	0,
+	0,
+	1896,
+	1634,
+	1995,
+	1995,
+	1995,
+	1995,
+	1637,
+	1995,
+	1725,
+	1995,
+	1924,
+	1679,
+	1995,
+	1995,
+	1995,
+	1924,
+	1995,
+	1995,
+	1995,
+	1995,
+	1924,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	1995,
+	6201,
+	1995,
+};
+static const Il2CppTokenRangePair s_rgctxIndices[3] = 
+{
+	{ 0x02000002, { 0, 9 } },
+	{ 0x02000003, { 9, 7 } },
+	{ 0x02000004, { 16, 7 } },
+};
+extern const uint32_t g_rgctx_ObjectPool_1_t1F2BF212A972340C40F22C198E173DE436158C04;
+extern const uint32_t g_rgctx_Func_1_t53E8D82BDF180A502169FDB50C20622553C58FAE;
+extern const uint32_t g_rgctx_ObjectPool_1_Allocate_mEC8D33219734B0ADF0F33DE695B5759BE0E967FE;
+extern const uint32_t g_rgctx_Queue_1_tEB12110A6D35ED0A7A342F0FEA8FC24E69149F66;
+extern const uint32_t g_rgctx_Func_1_Invoke_m77BDF6CD48059BBE8B4C3E67A5B9D125F9AB7D3C;
+extern const uint32_t g_rgctx_T_t6F1CDAF64584826389FD82E17CF937EA0026F507;
+extern const uint32_t g_rgctx_Queue_1_Enqueue_mC6366D810D765110DAF0F464CF5304570272BB21;
+extern const uint32_t g_rgctx_Queue_1_get_Count_m52C0778552E9A4EE4AA0AAA9FF4F86978590B4A5;
+extern const uint32_t g_rgctx_Queue_1_Dequeue_mB8DA44CF2CDB5451C771B81BB378FEDE29A15D69;
+extern const uint32_t g_rgctx_Singleton_1_tEB10BC7581192E8DC4004CC6A80E88A3E42C3444;
+extern const uint32_t g_rgctx_T_t2337B8A22C295A41D129CA0B4B104663AAC37B94;
+extern const uint32_t g_rgctx_Singleton_1_tEB10BC7581192E8DC4004CC6A80E88A3E42C3444;
+extern const uint32_t g_rgctx_Singleton_1_get_Instance_m565A8153BCDE23F1FFC68A03B7246DB4EF3F55B9;
+extern const uint32_t g_rgctx_Singleton_1_set_Instance_m1B08D21323C11A6592278F383111F16F24252048;
+extern const uint32_t g_rgctx_Singleton_1_OnAwake_m98E12BE762B28C1C605EFAF966CE0D9AE4051351;
+extern const uint32_t g_rgctx_Singleton_1_OnStart_m3C81EF94B5F4F164817864505F88CD1528DC0066;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_t159D500F55BB62AD9DC6A6C6FC7C25DBE2973ED1;
+extern const uint32_t g_rgctx_T_t73F656669188F91BA7DCA41281B04E23C6B1E9FE;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_t159D500F55BB62AD9DC6A6C6FC7C25DBE2973ED1;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_get_Instance_mC3559D67A77185F42D217C2A0DED10B574BEA1B2;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_set_Instance_m1DC13EF81E8EACDC21F846FC971272B41FD2813E;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_OnAwake_mB746EA3E3EB1A9F5EF39BF5BA547141F71D842E6;
+extern const uint32_t g_rgctx_Singleton_DontDestroy_1_OnStart_mA6202E3D9ED1A2CA276C601EEC120F55AFA6C8DC;
+static const Il2CppRGCTXDefinition s_rgctxValues[23] = 
+{
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_ObjectPool_1_t1F2BF212A972340C40F22C198E173DE436158C04 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Func_1_t53E8D82BDF180A502169FDB50C20622553C58FAE },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_ObjectPool_1_Allocate_mEC8D33219734B0ADF0F33DE695B5759BE0E967FE },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Queue_1_tEB12110A6D35ED0A7A342F0FEA8FC24E69149F66 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Func_1_Invoke_m77BDF6CD48059BBE8B4C3E67A5B9D125F9AB7D3C },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t6F1CDAF64584826389FD82E17CF937EA0026F507 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Queue_1_Enqueue_mC6366D810D765110DAF0F464CF5304570272BB21 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Queue_1_get_Count_m52C0778552E9A4EE4AA0AAA9FF4F86978590B4A5 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Queue_1_Dequeue_mB8DA44CF2CDB5451C771B81BB378FEDE29A15D69 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Singleton_1_tEB10BC7581192E8DC4004CC6A80E88A3E42C3444 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t2337B8A22C295A41D129CA0B4B104663AAC37B94 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Singleton_1_tEB10BC7581192E8DC4004CC6A80E88A3E42C3444 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_1_get_Instance_m565A8153BCDE23F1FFC68A03B7246DB4EF3F55B9 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_1_set_Instance_m1B08D21323C11A6592278F383111F16F24252048 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_1_OnAwake_m98E12BE762B28C1C605EFAF966CE0D9AE4051351 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_1_OnStart_m3C81EF94B5F4F164817864505F88CD1528DC0066 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Singleton_DontDestroy_1_t159D500F55BB62AD9DC6A6C6FC7C25DBE2973ED1 },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_T_t73F656669188F91BA7DCA41281B04E23C6B1E9FE },
+	{ (Il2CppRGCTXDataType)2, (const void *)&g_rgctx_Singleton_DontDestroy_1_t159D500F55BB62AD9DC6A6C6FC7C25DBE2973ED1 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_DontDestroy_1_get_Instance_mC3559D67A77185F42D217C2A0DED10B574BEA1B2 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_DontDestroy_1_set_Instance_m1DC13EF81E8EACDC21F846FC971272B41FD2813E },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_DontDestroy_1_OnAwake_mB746EA3E3EB1A9F5EF39BF5BA547141F71D842E6 },
+	{ (Il2CppRGCTXDataType)3, (const void *)&g_rgctx_Singleton_DontDestroy_1_OnStart_mA6202E3D9ED1A2CA276C601EEC120F55AFA6C8DC },
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	62,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	3,
+	s_rgctxIndices,
+	23,
+	s_rgctxValues,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
