@@ -217,8 +217,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 918788382}
-  - {fileID: 842599421}
+  - {fileID: 1004412908}
+  - {fileID: 1848827463}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1388,7 +1388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042ccb28b924a9b46a45da3a30eaed6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionController: {fileID: 1492308646}
 --- !u!4 &1156379841
 Transform:
   m_ObjectHideFlags: 0
@@ -1588,7 +1587,7 @@ MonoBehaviour:
   players:
   - {fileID: 1526261748}
   - {fileID: 903374893}
-  selectedPlayerPosition: {x: -6.5, y: 0, z: 0}
+  selectedPlayerPosition: {x: -5, y: 0, z: 0}
 --- !u!1 &1526261744
 GameObject:
   m_ObjectHideFlags: 0

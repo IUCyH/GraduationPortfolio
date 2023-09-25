@@ -28,6 +28,7 @@ public class SelectingPlayer : MonoBehaviour
         if (IsSelected) return;
         
         ChangeSpriteColor(Color.white);
+        ChangeScale(1.3f, 1.3f, 1.3f);
         IsSelected = true;
         
         TitleManager.Instance.GoNextSelectionLevel();
@@ -38,6 +39,7 @@ public class SelectingPlayer : MonoBehaviour
         if (IsSelected) return;
         
         ChangeSpriteColor(Color.white);
+        ChangeScale(1.3f, 1.3f, 1.3f);
         //animator.SetBool("SelectingAnimation", true);
     }
 
@@ -46,6 +48,7 @@ public class SelectingPlayer : MonoBehaviour
         if (IsSelected) return;
         
         ChangeSpriteColor(Color.gray);
+        ChangeScale(1f, 1f, 1f);
         //animator.SetBool("SelectingAnimation", false);
     }
 
@@ -54,12 +57,18 @@ public class SelectingPlayer : MonoBehaviour
         sprRenderer.color = color;
     }
 
+    void ChangeScale(float x, float y, float z)
+    {
+        transform.localScale = new Vector3(x, y, z);
+    }
+
     public void Init()
     {
         transform.position = originPos;
         IsSelected = false;
         
         ChangeSpriteColor(Color.gray);
+        ChangeScale(1f, 1f, 1f);
         gameObject.SetActive(true);
     }
 
