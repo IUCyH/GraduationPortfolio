@@ -65,7 +65,7 @@ public class TalkManger : MonoBehaviour
     {
         Talk(ScanObject.npcID, ScanObject.isNpc);
 
-        talkPanel.SetActive(isAction);      
+        talkPanel.SetActive(isAction);
         playerMoveMent.enabled = !isAction;
     }
 
