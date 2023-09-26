@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class PlayerAnimationState : MonoBehaviour
 {
-    static string currentState = "player_Idle";
+    static string currentState;
     static Animator animator;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        currentState = "player_Idle";
     }
 
     public static void ChangeAnimationState(string newState)

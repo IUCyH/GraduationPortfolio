@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float playerSpeed;//10
 
+    public bool isStopAllMovement;
+    
     [SerializeField]
     Vector2 inputVec;
 
