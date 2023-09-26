@@ -5,6 +5,8 @@ public class NPCManager : MonoBehaviour
 {
     public List<TalkObjects> TalkObjectList = new List<TalkObjects>();
 
+    int j;
+
     void Start()
     {
         InitializeNPCs();
@@ -12,12 +14,19 @@ public class NPCManager : MonoBehaviour
 
     void InitializeNPCs()
     {
-        foreach (TalkObjects TalkObject in TalkObjectList)
+        for (int i = 0; i < TalkObjectList.Count; i++)
         {
-            for (int i = 0; i < 10; i+= 10) 
+
+            if (TalkObjectList[i] != null)
             {
-                TalkObject.InitializeID(i); 
-            }           
+                TalkObjectList[i].InitializeID(j);
+            }
+            else
+            {
+                continue;
+            }
+
+            j += 10;
         }
     }
 }
