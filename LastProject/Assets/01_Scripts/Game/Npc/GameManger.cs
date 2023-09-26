@@ -1,22 +1,23 @@
-using System.ComponentModel;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TalkManger : MonoBehaviour
+public class GameManger : MonoBehaviour
 {
-    [SerializeField]
-    TalkInformation talkinformaition;
-    [SerializeField]
-    TextMeshProUGUI talkText;
-
-    [SerializeField] //테스트 ReadOnly 어케 씀?
-    TalkObjects ScanObject; 
-
     [SerializeField]
     PlayerMovement playerMoveMent;
 
+    TalkObjects ScanObject;
+
+    [SerializeField]
+    TalkManager talkManager;
+    [SerializeField]
+    TextMeshProUGUI talkText;
+
     [SerializeField]
     GameObject talkPanel;
+    [SerializeField]
+    Image potraitImg;
 
     [SerializeField]
     int talkIndex;
@@ -40,7 +41,7 @@ public class TalkManger : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
-        string talkData = talkinformaition.GetTalk(id, talkIndex);
+        string talkData = talkManager.GetTalk(id, talkIndex);
         if (talkData == null)
         {
             isAction = false;
@@ -50,11 +51,16 @@ public class TalkManger : MonoBehaviour
 
         if (isNpc)
         {
-            talkText.text = talkData;
+            talkText.text = talkData.Split(':')[0];
+
+            potraitImg.sprite = talkManager.GetPotrait(id, int.Parse(talkData.Split(':')[1]));
+            potraitImg.color = new Color(1, 1, 1, 1);
         }
         else
         {
             talkText.text = talkData;
+
+            potraitImg.color = new Color(1, 1, 1, 0);
         }
 
         isAction = true;
