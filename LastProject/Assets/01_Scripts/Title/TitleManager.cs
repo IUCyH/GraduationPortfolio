@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TitleManager : Singleton<TitleManager>
 {
     List<ISelectWindow> selectionWindows;
+    [SerializeField]
+    Image exitButtonImg;
 
     const int MaxSelectionLevel = 2;
     int currSelectionLevel;
@@ -20,6 +23,8 @@ public class TitleManager : Singleton<TitleManager>
             var selectWindowObj = windows[i].GetComponent<ISelectWindow>();
             selectionWindows[selectWindowObj.Level] = selectWindowObj;
         }
+        
+        ShowOrHideExitButton();
     }
 
     public void GoNextSelectionLevel()
@@ -29,6 +34,8 @@ public class TitleManager : Singleton<TitleManager>
         selectionWindows[currSelectionLevel++].Close();
 
         selectionWindows[currSelectionLevel].Open();
+        
+        ShowOrHideExitButton();
     }
 
     public void GoPrevSelectionLevel()
@@ -38,6 +45,26 @@ public class TitleManager : Singleton<TitleManager>
         selectionWindows[currSelectionLevel--].Close();
         
         selectionWindows[currSelectionLevel].Open();
+        
+        ShowOrHideExitButton();
+    }
+
+    public void LoadGameScene()
+    {
+        SceneLoadManager.Instance.Load(Scene.Game);
+    }
+
+    void ShowOrHideExitButton()
+    {
+        if (currSelectionLevel != 0)
+        {
+            exitButtonImg.enabled = true;
+        }
+
+        else
+        {
+            exitButtonImg.enabled = false;
+        }
     }
 
     void Update()
