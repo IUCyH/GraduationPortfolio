@@ -10,7 +10,7 @@ public class TitleManager : Singleton<TitleManager>
     [SerializeField]
     Image exitButtonImg;
 
-    const int MaxSelectionLevel = 2;
+    const int MaxSelectionLevel = 1;
     int currSelectionLevel;
 
     protected override void OnAwake()
