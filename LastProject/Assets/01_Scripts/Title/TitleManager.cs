@@ -40,6 +40,11 @@ public class TitleManager : Singleton<TitleManager>
         selectionWindows[currSelectionLevel].Open();
     }
 
+    public void LoadGameScene()
+    {
+        SceneLoadManager.Instance.Load(Scene.Game);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
