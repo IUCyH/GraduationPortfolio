@@ -48,6 +48,7 @@ public class ButtonManager : MonoBehaviour
 
     public void ExitToMainScene()
     {
+        Time.timeScale = 1f;
         SceneLoadManager.Instance.Load(Scene.Title);
     }
 }

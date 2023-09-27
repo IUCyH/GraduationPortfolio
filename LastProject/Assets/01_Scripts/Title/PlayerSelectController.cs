@@ -32,6 +32,8 @@ public class PlayerSelectController : MonoBehaviour
 
     public void Init(int selectedPlayerID)
     {
+        Debug.Log(selectedPlayerID);
+        Debug.Log(playerID);
         if (playerID == selectedPlayerID)
         {
             PlaySelectAnimation();
@@ -45,6 +47,7 @@ public class PlayerSelectController : MonoBehaviour
 
     public void PlaySelectAnimation()
     {
+        Debug.Log("aojfia");
         animator.SetBool(Selection, true);
     }
 
