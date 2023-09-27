@@ -1951,6 +1951,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mD4F3498FBD3BDD3F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Singleton_DontDestroy_1__ctor_m39A29988EC7F91F673F3E2A066EC0D2E92BC3663_gshared (Singleton_DontDestroy_1_tAEB94B306E7ACB04038E0EC355E88134FA398E4C* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26ACAF3BAF386FFEA83893BA51DB9FD8BA30_gshared_inline (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_index, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Singleton_DontDestroy_1_get_Instance_mBEA2E5C0C393CDC87405A5253C7243D822393656_gshared_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component_GetComponent_TisIl2CppFullySharedGenericAny_m47CBDD147982125387F078ABBFDAAB92D397A6C2_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m7745B6ED71E47C95E1BFCE647C4F026A404C668F_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_m54D479280472DEA042DB3933AF547E666B017333_gshared (Dictionary_2_t5C32AF17A5801FB3109E5B0E622BA8402A04E08E* __this, Il2CppFullySharedGenericAny ___0_key, Il2CppFullySharedGenericAny ___1_value, const RuntimeMethod* method) ;
@@ -1960,7 +1961,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D06
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mACCB7726C2E9728AE336F99C68B334459F9F30FB_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, RuntimeObject* ___0_collection, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_GetComponent_TisIl2CppFullySharedGenericAny_m1122128E432233EB251AECF734E2B72A42A2C194_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_set_Item_m9A958091885CC5363CCFE9F0BC472EAFCB56C813_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, int32_t ___0_index, Il2CppFullySharedGenericAny ___1_value, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Singleton_DontDestroy_1_get_Instance_mBEA2E5C0C393CDC87405A5253C7243D822393656_gshared_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Singleton_1__ctor_mD821C051D84F31B82CD3EC80D5174ADD3F038B14_gshared (Singleton_1_t761811FA61B8CEAEB90FA0D60BD999994A7FE1E6* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_mA6DFDBC2B22D6318212C6989A34784BD8303AF33_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* __this, Il2CppFullySharedGenericAny ___0_item, const RuntimeMethod* method) ;
 
@@ -2006,7 +2006,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Input_GetKeyDown_mB237DEA6244132670D38990BAB77D813FBB028D2 (int32_t ___0_key, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331 (float ___0_value, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1 (int32_t ___0_sceneBuildIndex, const RuntimeMethod* method) ;
+inline SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_inline (const RuntimeMethod* method)
+{
+	return ((  SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* (*) (const RuntimeMethod*))Singleton_DontDestroy_1_get_Instance_mBEA2E5C0C393CDC87405A5253C7243D822393656_gshared_inline)(method);
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoadManager_Load_m741B88CB50D860F227A49EB1000D6F119BF5BE4B (SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* __this, int32_t ___0_scene, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManger_Action_m3DD4B0D081701CF5E6FCCE1EE542F31AF2F40056 (GameManger_t8917D6FDC08A856ABB7BAF8337DF42BFEF21AF75* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TypeEffect_SetMsg_mB18BEC8DB5F65E0194BF374B36D4028D69294B3F (TypeEffect_t3DA6B4DD08C5C2DA4CA1CAFDD9CE470A891EBCC4* __this, String_t* ___0_msg, const RuntimeMethod* method) ;
@@ -2169,11 +2173,6 @@ inline RuntimeObject* List_1_get_Item_m6652997B1006A2775844DD3C612826A35E529531 
 	((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, Il2CppFullySharedGenericAny*, const RuntimeMethod*))List_1_get_Item_m6E4BA37C1FB558E4A62AE4324212E45D09C5C937_gshared)((List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)__this, ___0_index, (Il2CppFullySharedGenericAny*)&il2cppRetVal, method);
 	return il2cppRetVal;
 }
-inline SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_inline (const RuntimeMethod* method)
-{
-	return ((  SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* (*) (const RuntimeMethod*))Singleton_DontDestroy_1_get_Instance_mBEA2E5C0C393CDC87405A5253C7243D822393656_gshared_inline)(method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneLoadManager_Load_m741B88CB50D860F227A49EB1000D6F119BF5BE4B (SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* __this, int32_t ___0_scene, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TitleManager_GoPrevSelectionLevel_m49044861D9D84A494289BA89699CC1E239F3B3CF (TitleManager_t6030A56D57245C74D7D98F40591DF5246F1BE4CC* __this, const RuntimeMethod* method) ;
 inline void Singleton_1__ctor_mE0F8E20E803B92BF19C27E78D4665616A26C8E6D (Singleton_1_t6B63F65B483BA968FA5697BB134D6FCA7208B9BF* __this, const RuntimeMethod* method)
 {
@@ -2514,12 +2513,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonManager_ExitToMainScene_m4A3F6012B
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
-		SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1(0, NULL);
+		SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* L_0;
+		L_0 = Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_inline(Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_RuntimeMethod_var);
+		NullCheck(L_0);
+		SceneLoadManager_Load_m741B88CB50D860F227A49EB1000D6F119BF5BE4B(L_0, 0, NULL);
 		return;
 	}
 }
@@ -4936,17 +4937,17 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mD2ED26A
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Singleton_1_get_Instance_mA9E44B4C4951B6DC9272B74375A0AA8C1B9932A0_gshared_inline (const RuntimeMethod* method) 
-{
-	{
-		RuntimeObject* L_0 = ((Singleton_1_t761811FA61B8CEAEB90FA0D60BD999994A7FE1E6_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___U3CInstanceU3Ek__BackingField;
-		return L_0;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Singleton_DontDestroy_1_get_Instance_mBEA2E5C0C393CDC87405A5253C7243D822393656_gshared_inline (const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = ((Singleton_DontDestroy_1_tAEB94B306E7ACB04038E0EC355E88134FA398E4C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___U3CInstanceU3Ek__BackingField;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Singleton_1_get_Instance_mA9E44B4C4951B6DC9272B74375A0AA8C1B9932A0_gshared_inline (const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = ((Singleton_1_t761811FA61B8CEAEB90FA0D60BD999994A7FE1E6_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
