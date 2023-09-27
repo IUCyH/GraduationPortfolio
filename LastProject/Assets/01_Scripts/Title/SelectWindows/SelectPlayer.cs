@@ -59,6 +59,7 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
             currSelectedPlayer = 0;
         }
 
+        TitleManager.Instance.SelectedPlayerID = currSelectedPlayer;
         SetCurrentPlayer();
         UpdatePlayerInfo();
     }
@@ -82,6 +83,7 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
             currSelectedPlayer = playerCount - 1;
         }
 
+        TitleManager.Instance.SelectedPlayerID = currSelectedPlayer;
         SetCurrentPlayer();
         UpdatePlayerInfo();
     }

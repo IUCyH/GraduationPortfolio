@@ -12,6 +12,8 @@ public class TitleManager : Singleton<TitleManager>
 
     const int MaxSelectionLevel = 1;
     int currSelectionLevel;
+    
+    public int SelectedPlayerID { get; set; }
 
     protected override void OnAwake()
     {
@@ -56,6 +58,7 @@ public class TitleManager : Singleton<TitleManager>
 
     public void LoadGameScene()
     {
+        //SceneLoadManager.Instance.Load(Scene.Game, SelectedPlayerID); 이런식으로 작성가능
         SceneLoadManager.Instance.Load(Scene.Game);
     }
 
