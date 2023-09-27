@@ -23,6 +23,11 @@ public class TitleManager : Singleton<TitleManager>
             var selectWindowObj = windows[i].GetComponent<ISelectWindow>();
             selectionWindows[selectWindowObj.Level] = selectWindowObj;
         }
+    }
+
+    protected override void OnStart()
+    {
+        DataManager.Instance.Load();
         
         ShowOrHideExitButton();
     }

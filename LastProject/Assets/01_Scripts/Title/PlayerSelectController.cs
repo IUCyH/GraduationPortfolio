@@ -13,7 +13,7 @@ public class PlayerSelectController : MonoBehaviour
     
     int playerID;
     
-    public RectTransform ThisRectTransform { get; set; }
+    public RectTransform ThisRectTransform { get; private set; }
 
     void Awake()
     {
