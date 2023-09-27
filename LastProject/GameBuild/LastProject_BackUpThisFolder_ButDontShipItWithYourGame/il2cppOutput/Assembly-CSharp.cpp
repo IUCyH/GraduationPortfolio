@@ -2517,6 +2517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ButtonManager_ExitToMainScene_m4A3F6012B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		Time_set_timeScale_mEF84EE4B2376A458387648079B426B267862D331((1.0f), NULL);
 		SceneLoadManager_t276D307BC4DFDE512C74063313948E05FABA4D4F* L_0;
 		L_0 = Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_inline(Singleton_DontDestroy_1_get_Instance_m7239F593316581B3D3C67C5D3E3E20A2E3288863_RuntimeMethod_var);
 		NullCheck(L_0);
