@@ -2,12 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManger : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     [SerializeField]
     PlayerMovement playerMoveMent;
 
-    TalkObjects ScanObject;
+    TalkObjects scanObject;
 
     [SerializeField]
     TalkManager talkManager;
@@ -28,15 +28,7 @@ public class GameManger : MonoBehaviour
 
     [SerializeField]
     bool isAction;
-    bool isCollisiontNPC;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && isCollisiontNPC)
-        {
-            Action();
-        }
-    }
+    
 
     void Talk(int id, bool isNpc)
     {
@@ -88,29 +80,16 @@ public class GameManger : MonoBehaviour
         talkIndex++;
     }
 
-    void Action()
+    public void Action()
     {
-        Talk(ScanObject.npcID, ScanObject.isNpc);
+        Talk(scanObject.npcID, scanObject.isNpc);
 
         talkPanel.SetBool("isShow", isAction    );
         playerMoveMent.enabled = !isAction;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void CallScanObject(TalkObjects talkObjects)
     {
-        ScanObject = collision.GetComponent<TalkObjects>();
-
-        if (collision.gameObject.CompareTag("NPC"))
-        {
-            isCollisiontNPC = true;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("NPC"))
-        {
-            isCollisiontNPC = false;
-        }
+        scanObject = talkObjects;
     }
 }

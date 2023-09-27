@@ -60,6 +60,8 @@ public class TitleManager : Singleton<TitleManager>
     {
         //SceneLoadManager.Instance.Load(Scene.Game, SelectedPlayerID); 이런식으로 작성가능
         SceneLoadManager.Instance.Load(Scene.Game);
+
+
     }
 
     void ShowOrHideExitButton()

@@ -11,8 +11,25 @@ public enum Scene
 
 public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
 {
+    AsyncOperation asyncOperation;
+
+    
+
     public void Load(Scene scene)
     {
-        SceneManager.LoadSceneAsync((int)scene);
+        SceneManager.LoadSceneAsync((int)scene);    
+    }
+
+    void Update()
+    {
+        if (!asyncOperation.isDone)
+        {
+
+        }
+        else
+        {
+            //GameManager
+        }
     }
 }
+ 
