@@ -57,6 +57,8 @@ public class TitleManager : Singleton<TitleManager>
     public void LoadGameScene()
     {
         SceneLoadManager.Instance.Load(Scene.Game);
+
+
     }
 
     void ShowOrHideExitButton()
