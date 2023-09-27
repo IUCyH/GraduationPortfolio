@@ -48,6 +48,6 @@ public class ButtonManager : MonoBehaviour
 
     public void ExitToMainScene()
     {
-        SceneManager.LoadScene(0);
+        SceneLoadManager.Instance.Load(Scene.Title);
     }
 }
