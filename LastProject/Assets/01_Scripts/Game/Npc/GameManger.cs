@@ -12,24 +12,23 @@ public class GameManger : MonoBehaviour
     [SerializeField]
     TalkManager talkManager;
     [SerializeField]
-    TextMeshProUGUI talkText;
+    TypeEffect talk;
 
     [SerializeField]
-    GameObject talkPanel;
+    Animator talkPanel;
+    [SerializeField]
+    Animator potraitAnim;
     [SerializeField]
     Image potraitImg;
 
     [SerializeField]
     int talkIndex;
+    [SerializeField]
+    Sprite prevPotrait;
 
     [SerializeField]
     bool isAction;
     bool isCollisiontNPC;
-
-    void Start()
-    {
-        talkPanel.SetActive(false);
-    }
 
     void Update()
     {
@@ -41,7 +40,23 @@ public class GameManger : MonoBehaviour
 
     void Talk(int id, bool isNpc)
     {
-        string talkData = talkManager.GetTalk(id, talkIndex);
+        //int questTalkIndex = 0;
+        string talkData = "";
+
+
+        if (talk.isAnim)
+        {
+            talk.SetMsg("");
+            return;
+        }
+        else
+        {
+            //questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = talkManager.GetTalk(id, talkIndex);
+        }
+
+       
+
         if (talkData == null)
         {
             isAction = false;
@@ -51,14 +66,20 @@ public class GameManger : MonoBehaviour
 
         if (isNpc)
         {
-            talkText.text = talkData.Split(':')[0];
+            talk.SetMsg(talkData.Split(':')[0]);
 
             potraitImg.sprite = talkManager.GetPotrait(id, int.Parse(talkData.Split(':')[1]));
             potraitImg.color = new Color(1, 1, 1, 1);
+
+            if (prevPotrait != potraitImg.sprite)
+            {
+                potraitAnim.SetTrigger("doEffect");
+                prevPotrait = potraitImg.sprite;
+            }
         }
         else
         {
-            talkText.text = talkData;
+            talk.SetMsg(talkData);
 
             potraitImg.color = new Color(1, 1, 1, 0);
         }
@@ -71,7 +92,7 @@ public class GameManger : MonoBehaviour
     {
         Talk(ScanObject.npcID, ScanObject.isNpc);
 
-        talkPanel.SetActive(isAction);
+        talkPanel.SetBool("isShow", isAction    );
         playerMoveMent.enabled = !isAction;
     }
 
