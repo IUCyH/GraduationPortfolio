@@ -1,12 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SelectPlayer : MonoBehaviour, ISelectWindow
 {
     [SerializeField]
     List<PlayerSelectController> players = new List<PlayerSelectController>();
+    [SerializeField]
+    TextMeshProUGUI[] playerInfoTexts;
+    [SerializeField]
+    GameObject parentOfPlayerInfoObj;
 
     int currSelectedPlayer;
     
@@ -14,6 +19,9 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
 
     void Start()
     {
+        playerInfoTexts = parentOfPlayerInfoObj.GetComponentsInChildren<TextMeshProUGUI>();
+        UpdatePlayerInfo();
+        
         gameObject.SetActive(false);
     }
 
@@ -52,6 +60,7 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
         }
 
         SetCurrentPlayer();
+        UpdatePlayerInfo();
     }
 
     public void OnPressPrevPlayerButton()
@@ -74,6 +83,7 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
         }
 
         SetCurrentPlayer();
+        UpdatePlayerInfo();
     }
 
     void SetPrevPlayer()
@@ -86,5 +96,15 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
     {
         players[currSelectedPlayer].ChangeImageColor(Color.white);
         players[currSelectedPlayer].PlaySelectAnimation();
+    }
+    
+    void UpdatePlayerInfo()
+    {
+        var playerInfo = CharacterDataTable.GetInfo(currSelectedPlayer);
+
+        for (int i = 0; i < playerInfoTexts.Length; i++)
+        {
+            playerInfoTexts[i].text = playerInfo.infoList[i];
+        }
     }
 }

@@ -1664,6 +1664,8 @@ MonoBehaviour:
   - {fileID: 1022118313}
   - {fileID: 767036492}
   - {fileID: 1504025650}
+  playerInfoTexts: []
+  parentOfPlayerInfoObj: {fileID: 873268995}
 --- !u!1 &1022118308
 GameObject:
   m_ObjectHideFlags: 0

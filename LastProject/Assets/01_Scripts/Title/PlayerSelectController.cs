@@ -10,16 +10,13 @@ public class PlayerSelectController : MonoBehaviour
     
     Image img;
     Animator animator;
-
-    Vector3 originPos;
+    
     int playerID;
     
-    public bool IsSelected { get; private set; }
     public RectTransform ThisRectTransform { get; set; }
 
     void Awake()
     {
-        originPos = transform.position;
         ThisRectTransform = GetComponent<RectTransform>();
         img = GetComponent<Image>();
         animator = GetComponent<Animator>();
