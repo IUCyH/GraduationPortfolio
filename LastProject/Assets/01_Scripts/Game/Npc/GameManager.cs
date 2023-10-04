@@ -38,6 +38,8 @@ public class GameManager : Singleton_DontDestroy<GameManager>
     [SerializeField]
     bool isAction;
 
+    public int PlayerID => playerNumber;
+
     void Start()
     {
         //플레이어 정보 가져와서 스프라이트 변경

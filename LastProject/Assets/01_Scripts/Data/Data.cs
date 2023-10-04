@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerData
 {
-    public int level;
-    public int progress;
+    public List<float> progresses;
 }
 
-public class PlayerInfo
+public class CharacterInfo
 {
     public List<string> infoList;
     public string name;
@@ -17,7 +16,7 @@ public class PlayerInfo
     public string constellation;
     public string specialNote;
 
-    public PlayerInfo(string name, string summary, string gender, string constellation, string specialNote)
+    public CharacterInfo(string name, string summary, string gender, string constellation, string specialNote)
     {
         SetInfo(name, summary, gender, constellation, specialNote);
         

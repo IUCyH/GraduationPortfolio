@@ -7,6 +7,11 @@ public class DataManager : Singleton_DontDestroy<DataManager>
     const string PlayerDataKey = "PlayerData";
 
     PlayerData playerData;
+
+    public float GetProgress(int playerID)
+    {
+        return playerData.progresses[playerID];
+    }
     
     public void Load()
     {
@@ -18,7 +23,7 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         }
         else
         {
-            playerData = new PlayerData();
+            playerData = new PlayerData { progresses = new List<float>(new float[CharacterDataTable.CharacterCount]) };
         }
 
         Save();
@@ -30,7 +35,5 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         
         PlayerPrefs.SetString(PlayerDataKey, json);
         PlayerPrefs.Save();
-        Debug.Log("Save Completed");
-        Debug.Log("Current Progress : " + playerData.progress);
     }
 }
