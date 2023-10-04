@@ -1,13 +1,9 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton_DontDestroy<GameManager>
 {
-    [SerializeField]
-    SceneLoadManager sceneLoadManager;
-
     [SerializeField]
     PlayerMovement playerMoveMent;
 
@@ -45,9 +41,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //플레이어 정보 가져와서 스프라이트 변경
-        playerNumber = sceneLoadManager.GetPlayerID();
         playerSprite = allPlayerSprites[playerNumber];
-        print(playerNumber);
+    }
+
+    public void SetPlayer(int playerID)
+    {
+        playerNumber = playerID;
     }
 
     void Talk(int id, bool isNpc)

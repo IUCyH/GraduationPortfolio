@@ -25,16 +25,8 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
         if (id.HasValue)
         {
             playerID = (int)id;
+            GameManager.Instance.SetPlayer((int)id);
         }
-        else
-        {
-            playerID = -1;
-        }
-    }
-
-    public int GetPlayerID()
-    {
-        return playerID;
     }
 
     void Update()
