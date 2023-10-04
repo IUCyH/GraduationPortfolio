@@ -63,9 +63,9 @@ public class TitleManager : Singleton<TitleManager>
 
     public void OnPressGameStartButton()
     {
+        SoundManager.Instance.StopBGM();
         SoundManager.Instance.PlaySFX(SFX.StartButton);
         SceneLoadManager.Instance.Load(Scene.Game, SelectedPlayerID); //이런식으로 작성가능
-        //SceneLoadManager.Instance.Load(Scene.Game);
     }
 
     public void QuitGame()

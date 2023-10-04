@@ -63,14 +63,13 @@ public class SoundManager : Singleton_DontDestroy<SoundManager>
             {
                 int playFinishedSfxCount = 0;
                 timer += Time.deltaTime;
-                Debug.Log("Count : " + sfxPlayCounts.Count);
+
                 for (int i = 0; i < sfxPlayCounts.Count; i++)
                 {
-                    if (lengthsOfSfx[i] / (float)sfxPlayCounts[i] <= timer)
+                    if (lengthsOfSfx[i] / sfxPlayCounts[i] <= timer)
                     {
                         lengthsOfSfx[i] -= timer;
                         sfxPlayCounts[i]--;
-                        Debug.Log("Curr : " + sfxPlayCounts[i]);
                     }
 
                     if (sfxPlayCounts[i] <= 0)
@@ -100,9 +99,15 @@ public class SoundManager : Singleton_DontDestroy<SoundManager>
         source.Play();
     }
 
+    public void StopBGM()
+    {
+        var source = audioSources[(int)Audio.BGM];
+        
+        source.Stop();
+    }
+
     public void PlaySFX(SFX sfx)
     {
-        Debug.Log(sfxPlayCounts[(int)sfx]);
         if (sfxPlayCounts[(int)sfx] > MaxPlayCount) return;
 
         var source = audioSources[(int)Audio.SFX];
@@ -113,7 +118,5 @@ public class SoundManager : Singleton_DontDestroy<SoundManager>
         lengthsOfSfx[(int)sfx] += clip.length;
 
         checkIsSFXIsPlaying = true;
-        Debug.Log(sfxPlayCounts[(int)sfx]);
-        //TODO : 현재 재생중인 오디오 클립들의 끝나는 시간을 확인해 sfxPlayCount를 1씩 감소시키는 로직
     }
 }

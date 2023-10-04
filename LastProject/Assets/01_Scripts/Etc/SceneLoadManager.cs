@@ -24,8 +24,8 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
 
         if (id.HasValue)
         {
-            playerID = (int)id;
-            GameManager.Instance.SetPlayer((int)id);
+            playerID = (int)id; //이 부분 삭제 및 playerID 변수도 삭제하기
+            GameManager.Instance.SetPlayer((int)id); //(int)id -> id.Value로 고치기
         }
     }
 
