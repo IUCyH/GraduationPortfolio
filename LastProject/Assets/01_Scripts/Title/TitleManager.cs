@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class TitleManager : Singleton<TitleManager>
     List<ISelectWindow> selectionWindows;
     [SerializeField]
     Image exitButtonImg;
+    [SerializeField]
+    Image quitGameButtonImg;
 
     const int MaxSelectionLevel = 1;
     int currSelectionLevel;
@@ -30,8 +33,8 @@ public class TitleManager : Singleton<TitleManager>
     protected override void OnStart()
     {
         DataManager.Instance.Load();
-        
-        ShowOrHideExitButton();
+
+        ShowOrHideExitButtonAndQuitButton();
     }
 
     public void GoNextSelectionLevel()
@@ -41,8 +44,8 @@ public class TitleManager : Singleton<TitleManager>
         selectionWindows[currSelectionLevel++].Close();
 
         selectionWindows[currSelectionLevel].Open();
-        
-        ShowOrHideExitButton();
+
+        ShowOrHideExitButtonAndQuitButton();
     }
 
     public void GoPrevSelectionLevel()
@@ -52,8 +55,8 @@ public class TitleManager : Singleton<TitleManager>
         selectionWindows[currSelectionLevel--].Close();
         
         selectionWindows[currSelectionLevel].Open();
-        
-        ShowOrHideExitButton();
+
+        ShowOrHideExitButtonAndQuitButton();
     }
 
     public void LoadGameScene()
@@ -64,16 +67,27 @@ public class TitleManager : Singleton<TitleManager>
 
     }
 
-    void ShowOrHideExitButton()
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
+    }
+
+    void ShowOrHideExitButtonAndQuitButton()
     {
         if (currSelectionLevel != 0)
         {
             exitButtonImg.enabled = true;
+            quitGameButtonImg.enabled = false;
         }
 
         else
         {
             exitButtonImg.enabled = false;
+            quitGameButtonImg.enabled = true;
         }
     }
 
