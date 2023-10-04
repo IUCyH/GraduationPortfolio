@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    SceneLoadManager sceneLoadManager;
+
     [SerializeField]
     PlayerMovement playerMoveMent;
 
@@ -18,17 +22,33 @@ public class GameManager : MonoBehaviour
     Animator talkPanel;
     [SerializeField]
     Animator potraitAnim;
-    [SerializeField]
-    Image potraitImg;
 
     [SerializeField]
-    int talkIndex;
+    Image potraitImg;
     [SerializeField]
     Sprite prevPotrait;
 
     [SerializeField]
+    List<Sprite> allPlayerSprites;
+    [SerializeField]
+    Sprite playerSprite;
+
+    [SerializeField]
+    int talkIndex;
+
+    [SerializeField]
+    int playerNumber;
+
+    [SerializeField]
     bool isAction;
-    
+
+    void Start()
+    {
+        //플레이어 정보 가져와서 스프라이트 변경
+        playerNumber = sceneLoadManager.GetPlayerID();
+        playerSprite = allPlayerSprites[playerNumber];
+        print(playerNumber);
+    }
 
     void Talk(int id, bool isNpc)
     {

@@ -14,11 +14,27 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
 {
     AsyncOperation asyncOperation;
     Scene currentLoadingScene = Scene.None;
-    
-    public void Load(Scene scene)
+
+    int playerID;
+
+    public void Load(Scene scene, int? id)
     {
         asyncOperation = SceneManager.LoadSceneAsync((int)scene);
         currentLoadingScene = scene;
+
+        if (id.HasValue)
+        {
+            playerID = (int)id;
+        }
+        else
+        {
+            playerID = -1;
+        }
+    }
+
+    public int GetPlayerID()
+    {
+        return playerID;
     }
 
     void Update()
@@ -32,6 +48,8 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
             else
             {
                 //TODO : 로딩 바 100%로 채우는 로직 작성 및 로딩이 끝난 후 할 일 작성
+
+
                 currentLoadingScene = Scene.None;
             }
         }
