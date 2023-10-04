@@ -28,6 +28,8 @@ public class TitleManager : Singleton<TitleManager>
             var selectWindowObj = windows[i].GetComponent<ISelectWindow>();
             selectionWindows[selectWindowObj.Level] = selectWindowObj;
         }
+        
+        SoundManager.Instance.PlayBGM(BGM.Title);
     }
 
     protected override void OnStart()
@@ -59,12 +61,11 @@ public class TitleManager : Singleton<TitleManager>
         ShowOrHideExitButtonAndQuitButton();
     }
 
-    public void LoadGameScene()
+    public void OnPressGameStartButton()
     {
+        SoundManager.Instance.PlaySFX(SFX.StartButton);
         //SceneLoadManager.Instance.Load(Scene.Game, SelectedPlayerID); 이런식으로 작성가능
         SceneLoadManager.Instance.Load(Scene.Game);
-
-
     }
 
     public void QuitGame()
