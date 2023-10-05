@@ -8,13 +8,20 @@ public class DataManager : Singleton_DontDestroy<DataManager>
 
     PlayerData playerData;
 
+    protected override void OnAwake()
+    {
+        Load();
+    }
+
     public int GetCurrentChapter(int playerID)
     {
+        Debug.Log(playerData.chapterEachCharacter.Count);
         return playerData.chapterEachCharacter[playerID];
     }
     
     public void Load()
     {
+        PlayerPrefs.DeleteAll();
         var json = PlayerPrefs.GetString(PlayerDataKey, string.Empty);
 
         if (!string.IsNullOrEmpty(json))
@@ -23,7 +30,8 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         }
         else
         {
-            playerData = new PlayerData { chapterEachCharacter = new List<int>(new int[CharacterDataTable.CharacterCount]) { 1, } };
+            playerData = new PlayerData { chapterEachCharacter = new List<int>(new int[CharacterDataTable.CharacterCount]) };
+            Debug.Log(playerData);
         }
 
         Save();

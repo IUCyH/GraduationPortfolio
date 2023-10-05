@@ -34,8 +34,6 @@ public class TitleManager : Singleton<TitleManager>
 
     protected override void OnStart()
     {
-        DataManager.Instance.Load();
-
         ShowOrHideExitButtonAndQuitButton();
     }
 

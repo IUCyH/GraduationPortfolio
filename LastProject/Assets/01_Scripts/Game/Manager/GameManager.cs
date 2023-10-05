@@ -40,7 +40,7 @@ public class GameManager : Singleton_DontDestroy<GameManager>
 
     public int PlayerID => playerNumber;
 
-    void Start()
+    protected override void OnAwake()
     {
         //Player 관련 초기설정 전부 SetPlayer 함수로 이동시키기
         //플레이어 정보 가져와서 스프라이트 변경

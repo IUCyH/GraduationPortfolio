@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class PlayerData
 {
     public List<int> chapterEachCharacter;
 }
 
+[Serializable]
 public class CharacterInfo
 {
     public List<string> infoList;
@@ -38,4 +41,10 @@ public class CharacterInfo
         this.constellation = constellation;
         this.specialNote = specialNote;
     }
+}
+
+[Serializable]
+public class CharacterScriptData
+{
+    public List<List<string>> script;
 }

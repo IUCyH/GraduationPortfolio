@@ -1,0 +1,5 @@
+
+Ncsharpsquid:S3903"1Move 'CharacterDataTable' into a named namespace.(‰‰•›
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(üø–Ýþÿÿÿÿ
+†csharpsquid:S2386	"dUse an immutable collection or reduce the accessibility of the public static field 'characterTable'.(üø–Ýþÿÿÿÿ
+mcsharpsquid:S2223	"KChange the visibility of 'characterTable' or make it 'const' or 'readonly'.(üø–Ýþÿÿÿÿ
