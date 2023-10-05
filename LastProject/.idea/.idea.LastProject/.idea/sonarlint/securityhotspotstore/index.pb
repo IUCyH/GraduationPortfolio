@@ -9,3 +9,5 @@ f
 6Assets/01_Scripts/Title/SelectWindows/ClickAnyWhere.cs,3\8\38df04477e5e1879bf598995fef35db338c4c86d
 T
 $Assets/01_Scripts/Utill/Singleton.cs,0\5\05e0893d449423bde616b9c27b7a9f104e57ad60
+_
+/Assets/Resources/Scripts/Player00/Chapter01.txt,9\3\936523a26e29971a0d5264df9a02f0808ed216a2

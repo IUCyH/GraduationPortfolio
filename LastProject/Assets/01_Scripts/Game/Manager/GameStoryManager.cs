@@ -31,10 +31,14 @@ public class GameStoryManager : Singleton<GameStoryManager>
     {
         endingFlag |= (int)condition;
     }
-
+    
+    /// <summary>
+    /// 값을 받아오고 나서 null 검사 필수!
+    /// </summary>
+    /// <param name="dialogueIndex">받아가야 할 대사의 인덱스 번호(대사의 순서번호)</param>
+    /// <returns></returns>
     public string GetDialogue(int dialogueIndex)
     {
-        //호출하는 곳에서 null검사 필수
         return chapters[currChapter].GetLine(dialogueIndex);
     }
 
