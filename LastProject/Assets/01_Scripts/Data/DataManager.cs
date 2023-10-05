@@ -23,7 +23,7 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         }
         else
         {
-            playerData = new PlayerData { chapterEachCharacter = new List<int>(new int[CharacterDataTable.CharacterCount]) };
+            playerData = new PlayerData { chapterEachCharacter = new List<int>(new int[CharacterDataTable.CharacterCount]) { 1, } };
         }
 
         Save();
