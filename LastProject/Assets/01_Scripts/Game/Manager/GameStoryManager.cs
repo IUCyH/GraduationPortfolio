@@ -3,18 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EndingCondition
+{
+    A,
+    B
+}
+
 public class GameStoryManager : Singleton<GameStoryManager>
 {
-    float progressTimer;
+    int currChapter;
+    int endingFlag;
 
     protected override void OnStart()
     {
         var id = GameManager.Instance.PlayerID;
-        progressTimer = DataManager.Instance.GetProgress(id);
+        currChapter = DataManager.Instance.GetCurrentChapter(id);
     }
 
-    void Update()
+    public void AddEndingFlag(EndingCondition condition)
     {
-        progressTimer += Time.deltaTime; //다른 로직으로 변경 가능
+        endingFlag |= (int)condition;
     }
 }

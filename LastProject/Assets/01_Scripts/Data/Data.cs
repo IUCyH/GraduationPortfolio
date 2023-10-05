@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerData
 {
-    public List<float> progresses;
+    public List<int> chapterEachCharacter;
 }
 
 public class CharacterInfo

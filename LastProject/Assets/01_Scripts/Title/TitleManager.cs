@@ -39,6 +39,14 @@ public class TitleManager : Singleton<TitleManager>
         ShowOrHideExitButtonAndQuitButton();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GoPrevSelectionLevel();
+        }
+    }
+
     public void GoNextSelectionLevel()
     {
         if (currSelectionLevel == MaxSelectionLevel) return;
@@ -89,14 +97,6 @@ public class TitleManager : Singleton<TitleManager>
         {
             exitButtonImg.enabled = false;
             quitGameButtonImg.enabled = true;
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GoPrevSelectionLevel();
         }
     }
 }

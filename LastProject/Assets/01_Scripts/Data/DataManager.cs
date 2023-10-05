@@ -8,9 +8,9 @@ public class DataManager : Singleton_DontDestroy<DataManager>
 
     PlayerData playerData;
 
-    public float GetProgress(int playerID)
+    public int GetCurrentChapter(int playerID)
     {
-        return playerData.progresses[playerID];
+        return playerData.chapterEachCharacter[playerID];
     }
     
     public void Load()
@@ -23,7 +23,7 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         }
         else
         {
-            playerData = new PlayerData { progresses = new List<float>(new float[CharacterDataTable.CharacterCount]) };
+            playerData = new PlayerData { chapterEachCharacter = new List<int>(new int[CharacterDataTable.CharacterCount]) };
         }
 
         Save();
