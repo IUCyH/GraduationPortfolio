@@ -42,6 +42,7 @@ public class GameManager : Singleton_DontDestroy<GameManager>
 
     void Start()
     {
+        //Player 관련 초기설정 전부 SetPlayer 함수로 이동시키기
         //플레이어 정보 가져와서 스프라이트 변경
         playerSprite = allPlayerSprites[playerNumber];
         //TODO : 플레이어의 id에 맞는 애니메이션 컨트롤러로 변경(Animation/AnimationController/Player에 저장돼 있음, 차레대로 신영, 지은, 재환, 신영을 제외한 나머지 컨트롤러는 animator override controller)
