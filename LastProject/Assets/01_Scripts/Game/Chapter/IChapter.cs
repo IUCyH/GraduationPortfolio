@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IChapter
 {
-    public void PrintLine(int lineCount);
+    public string GetLine(int lineIndex);
 }

@@ -15,10 +15,10 @@ public class Chpater_01 : MonoBehaviour, IChapter
         script = CharacterScriptTable.GetScript(id, Chapter);
     }
 
-    public void PrintLine(int lineCount)
+    public string GetLine(int lineIndex)
     {
-        if (lineCount > script.Count - 1) return;
-        
-        Debug.Log(script[lineCount]);
+        if (lineIndex > script.Count - 1) return null;
+
+        return script[lineIndex];
     }
 }

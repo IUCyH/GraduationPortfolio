@@ -32,12 +32,23 @@ public class GameStoryManager : Singleton<GameStoryManager>
         endingFlag |= (int)condition;
     }
 
+    public string GetDialogue(int dialogueIndex)
+    {
+        //호출하는 곳에서 null검사 필수
+        return chapters[currChapter].GetLine(dialogueIndex);
+    }
+
     void Update()
     {
         durationTimer += Time.deltaTime;
         if (durationTimer >= textDisplayDuration)
         {
-            chapters[currChapter].PrintLine(currLineCount++);
+            var dialogue = GetDialogue(currLineCount++);
+            if (dialogue != null)
+            {
+                Debug.Log(dialogue);
+            }
+
             durationTimer = 0f;
         }
     }
