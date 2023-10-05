@@ -11,9 +11,9 @@ public static class CharacterScriptTable
 
     static CharacterScriptTable()
     {
-        var playerCount = CharacterDataTable.CharacterCount;
+        var characterCount = CharacterDataTable.CharacterCount;
 
-        for (int i = 0; i < playerCount; i++)
+        for (int i = 0; i < characterCount; i++)
         {
             scriptData.Add(new CharacterScriptData { script = new List<List<string>>() });
             
