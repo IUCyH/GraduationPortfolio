@@ -15,8 +15,6 @@ Y
 )Assets/01_Scripts/Etc/SceneLoadManager.cs,c\1\c100c01216e3bcbb005c8d44a58549bcfc367859
 b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
-\
-,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b
 X
 (Assets/01_Scripts/Game/Npc/TypeEffect.cs,d\2\d2932809b4550ff76b95fef6a0a2659ab3b7163f
 Z
@@ -25,3 +23,5 @@ h
 8Assets/01_Scripts/Data/DataTable/CharacterScriptTable.cs,b\3\b34f349ab43b8defa683286d07f8d0e63c0f3d1b
 `
 0Assets/01_Scripts/Game/Player/PlayerCollision.cs,1\7\1733bf182b9526544c06d89ec13888c6c7057d38
+\
+,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b

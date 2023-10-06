@@ -15,7 +15,6 @@ public class DataManager : Singleton_DontDestroy<DataManager>
 
     public int GetCurrentChapter(int playerID)
     {
-        Debug.Log(playerData.chapterEachCharacter.Count);
         return playerData.chapterEachCharacter[playerID];
     }
     

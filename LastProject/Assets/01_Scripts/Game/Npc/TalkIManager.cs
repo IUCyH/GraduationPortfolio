@@ -41,7 +41,7 @@ public class TalkManager : Singleton<TalkManager>
         {
             isAction = false;
             talkIndex = 0;
-            return;//°­Á¦ Á¾·á(ÇÔ¼ö ½ÇÇà ¾ÈÇÔ)
+            return;//ê°•ì œ ì¢…ë£Œ(í•¨ìˆ˜ ì‹¤í–‰ ì•ˆí•¨)
         }
         
 

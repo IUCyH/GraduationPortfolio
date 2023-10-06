@@ -98,8 +98,6 @@ public class SelectPlayer : MonoBehaviour, ISelectWindow
     {
         players[currSelectedPlayer].ChangeImageColor(Color.white);
         players[currSelectedPlayer].PlaySelectAnimation();
-
-
     }
     
     void UpdatePlayerInfo()

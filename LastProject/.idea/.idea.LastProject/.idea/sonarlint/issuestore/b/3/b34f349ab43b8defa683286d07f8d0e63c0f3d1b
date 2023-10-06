@@ -1,3 +1,4 @@
 
 Ucsharpsquid:S3903"3Move 'CharacterScriptTable' into a named namespace.(çÕµîüÿÿÿÿ
 lcsharpsquid:S3963"JInitialize all 'static fields' inline and remove the 'static constructor'.(øºŸüÿÿÿÿ
+mcsharpsquid:S2589"DChange this condition so that it does not always evaluate to 'True'.(ÙššŠùÿÿÿÿ8ËİÎ®°1

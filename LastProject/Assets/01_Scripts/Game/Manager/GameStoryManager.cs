@@ -27,6 +27,14 @@ public class GameStoryManager : Singleton<GameStoryManager>
         chapters = GetComponentsInChildren<IChapter>();
     }
 
+    public void InitAllChapterScripts()
+    {
+        for (int i = 0; i < chapters.Length; i++)
+        {
+            chapters[i].Init();
+        }
+    }
+
     public void AddEndingFlag(EndingCondition condition)
     {
         endingFlag |= (int)condition;
@@ -40,20 +48,5 @@ public class GameStoryManager : Singleton<GameStoryManager>
     public string GetDialogue(int dialogueIndex)
     {
         return chapters[currChapter].GetLine(dialogueIndex);
-    }
-
-    void Update()
-    {
-        durationTimer += Time.deltaTime;
-        if (durationTimer >= textDisplayDuration)
-        {
-            var dialogue = GetDialogue(currLineCount++);
-            if (dialogue != null)
-            {
-                //Debug.Log(dialogue);
-            }
-
-            durationTimer = 0f;
-        }
     }
 }

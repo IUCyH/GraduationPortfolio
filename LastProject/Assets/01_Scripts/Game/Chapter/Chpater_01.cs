@@ -9,10 +9,10 @@ public class Chpater_01 : MonoBehaviour, IChapter
     
     List<string> script = new List<string>();
 
-    void Start()
+    public void Init()
     {
         var id = GameManager.Instance.PlayerID;
-        script = CharacterScriptTable.GetScript(1, Chapter);
+        script = CharacterScriptTable.GetScript(id, Chapter);
     }
 
     public string GetLine(int lineIndex)

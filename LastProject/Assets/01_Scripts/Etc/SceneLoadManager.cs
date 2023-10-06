@@ -55,7 +55,7 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
 
                 
                 GameManager.Instance.SetPlayer(playerID); //(int)id -> id.Value로 고치기
-                
+                GameStoryManager.Instance.InitAllChapterScripts();
 
                 currentLoadingScene = Scene.None;
                 loadingCanvas.enabled = false;
