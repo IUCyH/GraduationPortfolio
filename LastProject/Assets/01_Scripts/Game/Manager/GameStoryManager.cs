@@ -18,7 +18,7 @@ public class GameStoryManager : Singleton<GameStoryManager>
     int endingFlag;
 
     float durationTimer;
-    float textDisplayDuration = 0.8f;
+    float textDisplayDuration = 0f;
 
     protected override void OnStart()
     {

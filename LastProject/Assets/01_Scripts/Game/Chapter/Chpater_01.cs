@@ -12,7 +12,7 @@ public class Chpater_01 : MonoBehaviour, IChapter
     void Start()
     {
         var id = GameManager.Instance.PlayerID;
-        script = CharacterScriptTable.GetScript(id, Chapter);
+        script = CharacterScriptTable.GetScript(1, Chapter);
     }
 
     public string GetLine(int lineIndex)
