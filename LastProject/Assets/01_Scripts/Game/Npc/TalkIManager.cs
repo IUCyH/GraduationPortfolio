@@ -1,50 +1,72 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TalkManager : MonoBehaviour
+public class TalkManager : Singleton<TalkManager>
 {
-    Dictionary<int, string[]> talkData;
-    Dictionary<int, Sprite> potraitData;
+    TalkObjects scanObject;
 
     [SerializeField]
-    Sprite[] potraitArr;
+    TypeEffect typeEffect;
+    [SerializeField]
+    PlayerMovement playerMoveMent;
+  
 
-    void Awake()
+    [SerializeField]
+    Animator talkPanel;
+
+    int talkIndex;
+
+    bool isAction;
+
+    void Talk(bool isNpc)
     {
-        talkData = new Dictionary<int, string[]>();
-        potraitData = new Dictionary<int, Sprite>();
-        GenerateData();
-    }
-
-    void GenerateData()
-    {
-        talkData.Add(10, new string[] { "평범한 나무상자다" });
+        //int questTalkIndex = 0;
+        string talkData = "";
 
 
-        talkData.Add(1000, new string[] { "안녕?:0",
-                                          "이곳에 처음 왔구나?:1" });
-        talkData.Add(2000, new string[] { "여어:1",
-                                          "이 호수는 정말 아름답지?:1" });
-
-
-        potraitData.Add(1000 + 0, potraitArr[0]);
-        potraitData.Add(1000 + 1, potraitArr[1]);
-        potraitData.Add(1000 + 2, potraitArr[2]);
-        potraitData.Add(1000 + 3, potraitArr[3]);
-
-        potraitData.Add(2000 + 0, potraitArr[4]);
-    }
-
-    public string GetTalk(int id, int talkIndex)
-    {
-        if (talkIndex == talkData[id].Length)
-            return null;
+        if (typeEffect.isAnim)
+        {
+            typeEffect.SetMsg("");
+            return;
+        }
         else
-            return talkData[id][talkIndex];
+        {
+            //questTalkIndex = questManager.GetQuestTalkIndex(id);
+            talkData = GameStoryManager.Instance.GetDialogue(talkIndex);
+        }
+
+
+
+        if (talkData == null)
+        {
+            isAction = false;
+            talkIndex = 0;
+            return;//강제 종료(함수 실행 안함)
+        }
+        
+
+        if (isNpc)
+        {
+            var result = talkData.Split('_');
+            Debug.Log(talkData);
+            typeEffect.SetMsg(result.Length > 1 ? result[1] : result[0]);
+            
+        }
+
+        isAction = true;
+        talkIndex++;
     }
 
-    public Sprite GetPotrait(int id, int potraitIndex)
+    public void Action()
     {
-        return potraitData[id + potraitIndex];
+        Talk(scanObject.isNpc);
+
+        talkPanel.SetBool("isShow", isAction);
+        playerMoveMent.enabled = !isAction;
+    }
+
+    public void CallScanObject(TalkObjects talkObjects)
+    {
+        scanObject = talkObjects;
     }
 }

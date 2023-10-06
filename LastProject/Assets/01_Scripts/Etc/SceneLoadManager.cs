@@ -19,8 +19,9 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
     [SerializeField]
     Image loadingBar;
 
-    Scene currentLoadingScene = Scene.None;
     int playerID;
+
+    Scene currentLoadingScene = Scene.None;
 
     protected override void OnStart()
     {
@@ -31,13 +32,10 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
     {
         asyncOperation = SceneManager.LoadSceneAsync((int)scene);
         currentLoadingScene = scene;
-
         if (id.HasValue)
         {
-            playerID = (int)id; //이 부분 삭제 및 playerID 변수도 삭제하기
-            GameManager.Instance.SetPlayer((int)id); //(int)id -> id.Value로 고치기
+            playerID = id.Value;
         }
-
         loadingCanvas.enabled = true;
     }
 
@@ -54,6 +52,10 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
             {
                 //TODO : 로딩 바 100%로 채우는 로직 작성 및 로딩이 끝난 후 할 일 작성
                 loadingBar.fillAmount = 1f;
+
+                
+                GameManager.Instance.SetPlayer(playerID); //(int)id -> id.Value로 고치기
+                
 
                 currentLoadingScene = Scene.None;
                 loadingCanvas.enabled = false;

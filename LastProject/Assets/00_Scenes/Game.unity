@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 535434284}
   - component: {fileID: 535434285}
   m_Layer: 0
-  m_Name: TalkInformation
+  m_Name: TalkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,15 +1237,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564af278e8348634b9d69a5b9b85a608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potraitArr:
-  - {fileID: 21300000, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300002, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300004, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300006, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300008, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300010, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300012, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
-  - {fileID: 21300014, guid: d79edf18a76e2654a9ac99f15de8b2b3, type: 3}
+  typeEffect: {fileID: 473951346}
+  playerMoveMent: {fileID: 1452135704}
+  talkPanel: {fileID: 1494245408}
 --- !u!1 &622606786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,10 +1950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1625557d838cf4aa11a2ccd9ae69e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveMent: {fileID: 1452135704}
   talkManager: {fileID: 535434285}
-  talk: {fileID: 473951346}
-  talkPanel: {fileID: 1494245408}
   potraitAnim: {fileID: 1643702852}
   potraitImg: {fileID: 1643702849}
   prevPotrait: {fileID: 0}
@@ -2779,7 +2770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2248471fa8fe6384aab9a82a50006cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 954003029}
 --- !u!1 &1494245404
 GameObject:
   m_ObjectHideFlags: 0

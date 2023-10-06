@@ -59,10 +59,10 @@ public class TypeEffect : MonoBehaviour
         }
 
         msgText.text += targetMsg[index];
-     
+
 
         if (targetMsg[index] != ' ' && targetMsg[index] != '.')
-            audioSource.Play(); //SoundManager.Instance.PlaySFX(SFX.Talk) 으로 변경
+            SoundManager.Instance.PlaySFX(SFX.Talk);
         
         index++;
 

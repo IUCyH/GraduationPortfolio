@@ -50,7 +50,7 @@ public class GameStoryManager : Singleton<GameStoryManager>
             var dialogue = GetDialogue(currLineCount++);
             if (dialogue != null)
             {
-                Debug.Log(dialogue);
+                //Debug.Log(dialogue);
             }
 
             durationTimer = 0f;

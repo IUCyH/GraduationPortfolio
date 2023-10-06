@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerAnimationState : MonoBehaviour
 {
-    static string currentState;
-    static Animator animator;
+    string currentState;
+    Animator animator;
 
     void Start()
     {
@@ -11,7 +11,7 @@ public class PlayerAnimationState : MonoBehaviour
         currentState = "player_Idle";
     }
 
-    public static void ChangeAnimationState(string newState)
+    public void ChangeAnimationState(string newState)
     {
         // Stop the same animation from interrupting itself
         if (currentState == newState)
@@ -29,41 +29,26 @@ public class PlayerAnimationState : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        bool up = Input.GetKey(KeyCode.W);
+        bool down = Input.GetKey(KeyCode.S);
+        bool left = Input.GetKey(KeyCode.A);
+        bool right = Input.GetKey(KeyCode.D);
+
+        if (up)
         {
-            PlayerAnimationState.ChangeAnimationState("Player_RightUp");
+            if (left) ChangeAnimationState("Player_LeftUp");
+            else if (right) ChangeAnimationState("Player_RightUp");
+            else ChangeAnimationState("Player_Up");
         }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        else if (down)
         {
-            PlayerAnimationState.ChangeAnimationState("Player_LeftUp");
+            if (left) ChangeAnimationState("Player_LeftDown");
+            else if (right) ChangeAnimationState("Player_RightDown");
+            else ChangeAnimationState("Player_Down");
         }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_Up");
-        }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_RightDown");
-        }
-        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_LeftDown");
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_Down");
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_Right");
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_Left");
-        }
-        else
-        {
-            PlayerAnimationState.ChangeAnimationState("Player_Idle");
-        }
+        else if (left) ChangeAnimationState("Player_Left");
+        else if (right) ChangeAnimationState("Player_Right");
+        else ChangeAnimationState("Player_Idle");
+
     }
 }

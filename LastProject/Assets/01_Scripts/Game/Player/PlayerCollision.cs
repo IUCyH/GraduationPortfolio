@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    [SerializeField]
-    GameManager gameManager;
 
     bool isCollisiontNPC;
 
@@ -13,13 +11,13 @@ public class PlayerCollision : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isCollisiontNPC)
         {
-            gameManager.Action();
+            TalkManager.Instance.Action();
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        gameManager.CallScanObject(collision.GetComponent<TalkObjects>());     
+        TalkManager.Instance.CallScanObject(collision.GetComponent<TalkObjects>());     
 
         if (collision.gameObject.CompareTag("NPC"))
         {
