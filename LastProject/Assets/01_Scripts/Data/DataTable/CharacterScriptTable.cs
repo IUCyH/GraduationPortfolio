@@ -27,7 +27,7 @@ public static class CharacterScriptTable
                 {
                     var line = stringReader.ReadLine();
                     if (line == null) break;
-                    if(string.IsNullOrEmpty(line) || line.Contains("\t")) continue;
+                    if(string.IsNullOrEmpty(line)) continue;
                     
                     scriptData[i].script.Add(new List<string>());
                     scriptData[i].script[j].Add(line);
