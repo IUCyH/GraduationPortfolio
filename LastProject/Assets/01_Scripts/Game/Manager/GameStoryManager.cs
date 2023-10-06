@@ -23,7 +23,7 @@ public class GameStoryManager : Singleton<GameStoryManager>
     protected override void OnStart()
     {
         var id = GameManager.Instance.PlayerID;
-        currChapter = DataManager.Instance.GetCurrentChapter(1);
+        currChapter = DataManager.Instance.GetCurrentChapter(id);
         chapters = GetComponentsInChildren<IChapter>();
     }
 
