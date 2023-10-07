@@ -27,3 +27,11 @@ Z
 ,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b
 e
 5Assets/01_Scripts/Title/SelectWindows/SelectPlayer.cs,d\9\d9d8e63087d02b07b88b441e70954dcc249b5349
+W
+'Assets/01_Scripts/Sound/SoundManager.cs,3\2\32fdf044208058ff73624ce131061edeabfdfb40
+W
+'Assets/01_Scripts/Etc/SettingManager.cs,6\5\65ebcf435c4fbf379cfa323563817a587fba890c
+`
+0Assets/01_Scripts/Game/Manager/Button Manager.cs,e\3\e30d8d7733c0db32e9cc78e7995a84d1a1c989fd
+_
+/Assets/Resources/Scripts/Player01/Chapter01.txt,6\2\62adf42ac69128287027978efb4415202d5b43a5
