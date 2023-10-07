@@ -19,17 +19,17 @@ public class SettingManager : Singleton_DontDestroy<SettingManager>
 
     protected override void OnStart()
     {
-        OnPressCloseOptionWindowButton();
+        CloseOptionWindow();
 
         InitSliders();
     }
 
-    public void OnPressOpenOptionWindowButton()
+    public void OpenOptionWindow()
     {
         optionWindow.SetActive(true);
     }
 
-    public void OnPressCloseOptionWindowButton()
+    public void CloseOptionWindow()
     {
         optionWindow.SetActive(false);
     }

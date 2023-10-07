@@ -74,6 +74,11 @@ public class TitleManager : Singleton<TitleManager>
         SceneLoadManager.Instance.Load(Scene.Game, SelectedPlayerID); //이런식으로 작성가능
     }
 
+    public void OpenOptionWindow()
+    {
+        SettingManager.Instance.OpenOptionWindow();
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR

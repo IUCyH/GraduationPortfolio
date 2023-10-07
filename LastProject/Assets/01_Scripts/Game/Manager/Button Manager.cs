@@ -43,7 +43,7 @@ public class ButtonManager : MonoBehaviour
 
     public void SettingButton()
     {
-
+        SettingManager.Instance.OpenOptionWindow();
     }
 
     public void ExitToMainScene()
