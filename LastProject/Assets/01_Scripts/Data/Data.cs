@@ -55,4 +55,6 @@ public class SettingData
     public float totalVolume;
     public float bgmVolume;
     public float sfxVolume;
+    public bool muteBGM;
+    public bool muteSFX;
 }

@@ -40,7 +40,7 @@ public class DataManager : Singleton_DontDestroy<DataManager>
         return value;
     }
 
-    public void ChangeVolumeData(Audio audio, float value)
+    public void SetVolumeData(Audio audio, float value)
     {
         switch (audio)
         {
@@ -52,6 +52,36 @@ public class DataManager : Singleton_DontDestroy<DataManager>
                 break;
             case Audio.SFX:
                 settingData.sfxVolume = value;
+                break;
+        }
+    }
+
+    public bool GetIsMute(Audio audio)
+    {
+        bool isOn = true;
+
+        switch (audio)
+        {
+            case Audio.BGM:
+                isOn = settingData.muteBGM;
+                break;
+            case Audio.SFX:
+                isOn = settingData.muteSFX;
+                break;
+        }
+
+        return isOn;
+    }
+
+    public void SetMuteAudioData(Audio audio, bool value)
+    {
+        switch (audio)
+        {
+            case Audio.BGM:
+                settingData.muteBGM = value;
+                break;
+            case Audio.SFX:
+                settingData.muteSFX = value;
                 break;
         }
     }

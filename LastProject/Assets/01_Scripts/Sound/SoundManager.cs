@@ -130,4 +130,9 @@ public class SoundManager : Singleton_DontDestroy<SoundManager>
     {
         audioSources[(int)audio].volume = value;
     }
+
+    public void MuteOrOn(Audio audio, bool isMute)
+    {
+        audioSources[(int)audio].mute = isMute;
+    }
 }
