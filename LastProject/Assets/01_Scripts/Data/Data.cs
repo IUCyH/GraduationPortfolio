@@ -44,7 +44,15 @@ public class CharacterInfo
 }
 
 [Serializable]
-public class CharacterScriptData
+public class CharacterScriptInfo
 {
     public List<List<string>> script;
+}
+
+[Serializable]
+public class SettingData
+{
+    public float totalVolume;
+    public float bgmVolume;
+    public float sfxVolume;
 }

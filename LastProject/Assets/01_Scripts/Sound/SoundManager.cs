@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Audio
+public enum Audio
 {
+    Total = -1,
     SFX,
     BGM
 }
@@ -25,7 +26,7 @@ public enum BGM
 public class SoundManager : Singleton_DontDestroy<SoundManager>
 {
     const int MaxPlayCount = 3;
-    
+
     AudioSource[] audioSources;
     [SerializeField]
     AudioClip[] bgmClips;
@@ -118,5 +119,15 @@ public class SoundManager : Singleton_DontDestroy<SoundManager>
         lengthsOfSfx[(int)sfx] += clip.length;
 
         checkIsSFXIsPlaying = true;
+    }
+
+    public void ChangeTotalVolume(float value)
+    {
+        AudioListener.volume = value;
+    }
+    
+    public void ChangeVolume(Audio audio, float value)
+    {
+        audioSources[(int)audio].volume = value;
     }
 }

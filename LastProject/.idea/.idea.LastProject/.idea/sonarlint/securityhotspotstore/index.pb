@@ -25,3 +25,5 @@ Z
 *Assets/01_Scripts/Game/Npc/TalkIManager.cs,9\4\9474fef78cd203262b763b425fad6f9b90040cd4
 \
 ,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b
+e
+5Assets/01_Scripts/Title/SelectWindows/SelectPlayer.cs,d\9\d9d8e63087d02b07b88b441e70954dcc249b5349

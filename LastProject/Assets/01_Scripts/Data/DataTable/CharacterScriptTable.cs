@@ -7,7 +7,7 @@ public static class CharacterScriptTable
 {
     static int ChapterCount = 1;
     
-    static List<CharacterScriptData> scriptData = new List<CharacterScriptData>();
+    static List<CharacterScriptInfo> scriptData = new List<CharacterScriptInfo>();
 
     static CharacterScriptTable()
     {
@@ -15,7 +15,7 @@ public static class CharacterScriptTable
 
         for (int i = 0; i < characterCount; i++)
         {
-            scriptData.Add(new CharacterScriptData { script = new List<List<string>>() });
+            scriptData.Add(new CharacterScriptInfo { script = new List<List<string>>() });
             
             for (int j = 0; j < ChapterCount; j++)
             {

@@ -38,7 +38,7 @@ public class ButtonManager : MonoBehaviour
 
     public void SaveButton()
     {
-
+        DataManager.Instance.Save();
     }
 
     public void SettingButton()

@@ -17,9 +17,6 @@ public class GameStoryManager : Singleton<GameStoryManager>
     int currLineCount;
     int endingFlag;
 
-    float durationTimer;
-    float textDisplayDuration = 0.8f;
-
     protected override void OnStart()
     {
         var id = GameManager.Instance.PlayerID;
