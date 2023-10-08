@@ -1,11 +1,10 @@
 
-[csharpsquid:S3903/"2Move 'CharacterScriptInfo' into a named namespace.(¨ıßîıÿÿÿÿ8üäÄ°1
 Scsharpsquid:S39035"*Move 'SettingData' into a named namespace.(«ò¯¬úÿÿÿÿ8°½œÄ°1
 Kcsharpsquid:S3903")Move 'PlayerData' into a named namespace.(«‚Šûÿÿÿÿ
 Icsharpsquid:S3903",Move 'CharacterInfo' into a named namespace.(ÆçÜæ
-fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(‚Õ€ºûÿÿÿÿ
+[csharpsquid:S3903/"2Move 'CharacterScriptInfo' into a named namespace.(¨ıßîıÿÿÿÿ8üäÄ°1
 hcsharpsquid:S11047"DMake this field 'private' and encapsulate it in a 'public' property.(‹ˆöÏ8±½œÄ°1
-mcsharpsquid:S11041"DMake this field 'private' and encapsulate it in a 'public' property.(¡©ñ™şÿÿÿÿ8Ÿ¶Îö¯1
+fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(‚Õ€ºûÿÿÿÿ
 mcsharpsquid:S11048"DMake this field 'private' and encapsulate it in a 'public' property.( Ó‹şÿÿÿÿ8±½œÄ°1
 mcsharpsquid:S11049"DMake this field 'private' and encapsulate it in a 'public' property.(ˆğ¨Øøÿÿÿÿ8±½œÄ°1
 hcsharpsquid:S1104:"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÔ¿§8ÃŸ„Ó°1
@@ -16,3 +15,4 @@ fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'publi
 fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(”¢°•ÿÿÿÿÿ
 fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(÷”¼÷ıÿÿÿÿ
 mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(¢€£Şıÿÿÿÿ8³¬½ö¯1
+mcsharpsquid:S11041"DMake this field 'private' and encapsulate it in a 'public' property.(¡©ñ™şÿÿÿÿ8Ÿ¶Îö¯1
