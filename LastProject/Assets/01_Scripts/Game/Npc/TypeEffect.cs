@@ -1,8 +1,12 @@
+using System;
+using System.Text;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TypeEffect : MonoBehaviour
 {
+    StringBuilder sb = new StringBuilder();
     [SerializeField]
     TextMeshProUGUI msgText;
     [SerializeField]
@@ -17,56 +21,64 @@ public class TypeEffect : MonoBehaviour
     int charPerSeconds;
        
     int index;
+    int orderOfEffecting;
 
     float interval;
 
     public bool isAnim;
+
+    void Awake()
+    {
+        orderOfEffecting = EventManager.Instance.AddFunc(() => Effecting());
+    }
 
     public void SetMsg(string msg)
     {
         if (isAnim)
         {
             msgText.text = targetMsg;
-            CancelInvoke();            
+
             EffectEnd();
+            EventManager.Instance.CancelAllInvoke();         
         }
         else
         {
             targetMsg = msg;
             EffectStart();
-        }      
+        }
     }
 
     void EffectStart()
     {
-        msgText.text = "";
+        msgText.text = string.Empty;
         index = 0;
+        sb.Clear();
         EndCursor.SetActive(false);
 
         interval = 1.0f / charPerSeconds;
 
         isAnim = true;
 
-        Invoke("Effecting", interval);
+        EventManager.Instance.Invoke(orderOfEffecting, interval);
     }
 
     void Effecting()
     {
         if (msgText.text == targetMsg)
         {
-            EffectEnd();    
+            EffectEnd();
             return;
         }
 
-        msgText.text += targetMsg[index];
-
+        sb.Append(targetMsg[index]);
+        msgText.text = sb.ToString();
 
         if (targetMsg[index] != ' ' && targetMsg[index] != '.')
             SoundManager.Instance.PlaySFX(SFX.Talk);
         
         index++;
 
-        Invoke("Effecting", interval);
+        EventManager.Instance.Invoke(orderOfEffecting, interval);
     }
 
     void EffectEnd()

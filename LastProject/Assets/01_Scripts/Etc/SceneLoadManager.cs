@@ -30,6 +30,7 @@ public class SceneLoadManager : Singleton_DontDestroy<SceneLoadManager>
 
     public void Load(Scene scene, int? id)
     {
+        EventManager.Instance.CancelAllInvoke();
         asyncOperation = SceneManager.LoadSceneAsync((int)scene);
         currentLoadingScene = scene;
         if (id.HasValue)

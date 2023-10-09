@@ -8,7 +8,7 @@ public class TalkManager : Singleton<TalkManager>
     [SerializeField]
     TypeEffect typeEffect;
     [SerializeField]
-    PlayerMovement playerMoveMent;
+    PlayerMovement playerMovement;
   
 
     [SerializeField]
@@ -62,7 +62,7 @@ public class TalkManager : Singleton<TalkManager>
         Talk(scanObject.isNpc);
 
         talkPanel.SetBool("isShow", isAction);
-        playerMoveMent.enabled = !isAction;
+        playerMovement.enabled = !isAction;
     }
 
     public void CallScanObject(TalkObjects talkObjects)

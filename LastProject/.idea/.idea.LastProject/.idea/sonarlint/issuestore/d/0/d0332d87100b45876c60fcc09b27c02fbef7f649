@@ -3,8 +3,8 @@ Scsharpsquid:S39035"*Move 'SettingData' into a named namespace.(«ò¯¬úÿÿÿÿ8°½
 Kcsharpsquid:S3903")Move 'PlayerData' into a named namespace.(«‚Šûÿÿÿÿ
 Icsharpsquid:S3903",Move 'CharacterInfo' into a named namespace.(ÆçÜæ
 [csharpsquid:S3903/"2Move 'CharacterScriptInfo' into a named namespace.(¨ıßîıÿÿÿÿ8üäÄ°1
-hcsharpsquid:S11047"DMake this field 'private' and encapsulate it in a 'public' property.(‹ˆöÏ8±½œÄ°1
 fcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(‚Õ€ºûÿÿÿÿ
+hcsharpsquid:S11047"DMake this field 'private' and encapsulate it in a 'public' property.(‹ˆöÏ8±½œÄ°1
 mcsharpsquid:S11048"DMake this field 'private' and encapsulate it in a 'public' property.( Ó‹şÿÿÿÿ8±½œÄ°1
 mcsharpsquid:S11049"DMake this field 'private' and encapsulate it in a 'public' property.(ˆğ¨Øøÿÿÿÿ8±½œÄ°1
 hcsharpsquid:S1104:"DMake this field 'private' and encapsulate it in a 'public' property.(ŒÔ¿§8ÃŸ„Ó°1

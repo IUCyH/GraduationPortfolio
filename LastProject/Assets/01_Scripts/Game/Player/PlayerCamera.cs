@@ -9,7 +9,7 @@ public class PlayerCamera : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 targetPos = new Vector3(player.position.x, player.position.y, this.transform.position.z);
+        Vector3 targetPos = new Vector3(player.position.x, player.position.y, transform.position.z);
 
         targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
         targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);
