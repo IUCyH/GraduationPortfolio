@@ -71,6 +71,7 @@ public class TypeEffect : MonoBehaviour
         }
 
         sb.Append(targetMsg[index]);
+        Debug.Log(sb.ToString());
         msgText.text = sb.ToString();
 
         if (targetMsg[index] != ' ' && targetMsg[index] != '.')

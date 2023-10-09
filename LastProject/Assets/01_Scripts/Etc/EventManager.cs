@@ -28,11 +28,19 @@ public class EventManager : Singleton_DontDestroy<EventManager>
                 }
 
                 int index = 0;
-                foreach (var func in invokeFunc)
+                for (int i = 0; i < funcList.Count; i++)
                 {
-                    if (func.Value <= timerList[index++])
+                    var func = funcList[i];
+
+                    if (invokeFunc.TryGetValue(func, out float time))
                     {
-                        func.Key();
+                        var timer = timerList[index++];
+
+                        if (time <= timer)
+                        {
+                            CancelInvoke(func, timer);
+                            func();
+                        }
                     }
                 }
             }
@@ -43,7 +51,7 @@ public class EventManager : Singleton_DontDestroy<EventManager>
 
     public int AddFunc(Action func)
     {
-        if (funcList.Contains(func)) return -1;
+        if (funcList.Contains(func)) return funcList.IndexOf(func);
         
         funcList.Add(func);
 
@@ -55,15 +63,21 @@ public class EventManager : Singleton_DontDestroy<EventManager>
         var func = funcList[orderNumber];
 
         if (invokeFunc.ContainsKey(func)) return;
-        
+
         invokeFunc.Add(func, time);
         timerList.Add(0f);
     }
 
+    public void CancelInvoke(Action func, float time)
+    {
+        invokeFunc.Remove(func);
+        timerList.Remove(time);
+    }
+    
     public void CancelInvoke(int orderNumber, float time)
     {
         var func = funcList[orderNumber];
-
+        
         invokeFunc.Remove(func);
         timerList.Remove(time);
     }
