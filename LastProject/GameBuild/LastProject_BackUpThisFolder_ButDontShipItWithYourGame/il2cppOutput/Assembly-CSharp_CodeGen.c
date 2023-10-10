@@ -29,6 +29,8 @@ extern void DataManager__ctor_mD735B7F80F3DE13E2BB45118CDA7FA619330DCDA (void);
 extern void CharacterDataTable_get_CharacterCount_m8A5172C4F0272D2916719B42CB242BFDE15C3299 (void);
 extern void CharacterDataTable__cctor_mC6579588824F8EA0A10DA8D50D8262352FE1D2F1 (void);
 extern void CharacterDataTable_GetInfo_mBD05E580545CF5E65FE43C829282C2E7B2BE9980 (void);
+extern void CharacterPortraitTable__cctor_mE728BD42759818DC5E32638B9BB081604281DFEF (void);
+extern void CharacterPortraitTable_GetPortraitSprite_m4BF5C57FDCF8254FBEC8D817E59CEA8AA7AF8E56 (void);
 extern void CharacterScriptTable__cctor_m4D92E755795001ADAFDFEAD4A5F3579A97F76624 (void);
 extern void CharacterScriptTable_GetScript_mF9A12654BCDDDA0E9F1052D2C1C41A34FB3A192D (void);
 extern void InvokeManager_OnStart_m16A7DFE328CFF52B8DA4E6FE65F0FEAB1A10575C (void);
@@ -74,6 +76,7 @@ extern void ButtonManager__ctor_m7DBD91D2AF27494F6AC7DC74DE679919AB1DD71F (void)
 extern void GameManager_get_PlayerID_m8224DC879049488AE562FF91C9E1797AF72DCCEB (void);
 extern void GameManager_OnAwake_mF4124998921AEF6C25AA92990A1342A055B9DA61 (void);
 extern void GameManager_SetPlayer_mBD5AC64477240E4D7A22428198428D496170B8DC (void);
+extern void GameManager_SetPotrait_m0B2AF700AE725BD190244C905EAF6AF2E9EEFAD3 (void);
 extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
 extern void GameStoryManager_OnStart_mA0DBE9C2C80C97D91E830B0BDD1FC15C3095476E (void);
 extern void GameStoryManager_InitAllChapterScripts_mE7B3D98F0A57D4181E129B235A3A6F8475D13F78 (void);
@@ -158,7 +161,7 @@ extern void SelectPlayer_UpdatePlayerInfo_m625D4F20E42A4ABAE05B759141479FD0D4B22
 extern void SelectPlayer__ctor_m3FC2A930D17341A9B96844144A61EF992CC620A6 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[169] = 
+static Il2CppMethodPointer s_methodPointers[172] = 
 {
 	PlayerData__ctor_mDD79CC7712EAF325215F97832BFE3403DF47DFA8,
 	CharacterInfo__ctor_mC08452A35AFDC7F4E2421CA3BD8E0825B4CA0D13,
@@ -177,6 +180,8 @@ static Il2CppMethodPointer s_methodPointers[169] =
 	CharacterDataTable_get_CharacterCount_m8A5172C4F0272D2916719B42CB242BFDE15C3299,
 	CharacterDataTable__cctor_mC6579588824F8EA0A10DA8D50D8262352FE1D2F1,
 	CharacterDataTable_GetInfo_mBD05E580545CF5E65FE43C829282C2E7B2BE9980,
+	CharacterPortraitTable__cctor_mE728BD42759818DC5E32638B9BB081604281DFEF,
+	CharacterPortraitTable_GetPortraitSprite_m4BF5C57FDCF8254FBEC8D817E59CEA8AA7AF8E56,
 	CharacterScriptTable__cctor_m4D92E755795001ADAFDFEAD4A5F3579A97F76624,
 	CharacterScriptTable_GetScript_mF9A12654BCDDDA0E9F1052D2C1C41A34FB3A192D,
 	InvokeManager_OnStart_m16A7DFE328CFF52B8DA4E6FE65F0FEAB1A10575C,
@@ -224,6 +229,7 @@ static Il2CppMethodPointer s_methodPointers[169] =
 	GameManager_get_PlayerID_m8224DC879049488AE562FF91C9E1797AF72DCCEB,
 	GameManager_OnAwake_mF4124998921AEF6C25AA92990A1342A055B9DA61,
 	GameManager_SetPlayer_mBD5AC64477240E4D7A22428198428D496170B8DC,
+	GameManager_SetPotrait_m0B2AF700AE725BD190244C905EAF6AF2E9EEFAD3,
 	GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368,
 	GameStoryManager_OnStart_mA0DBE9C2C80C97D91E830B0BDD1FC15C3095476E,
 	GameStoryManager_InitAllChapterScripts_mE7B3D98F0A57D4181E129B235A3A6F8475D13F78,
@@ -330,7 +336,7 @@ static Il2CppMethodPointer s_methodPointers[169] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[169] = 
+static const int32_t s_InvokerIndices[172] = 
 {
 	1998,
 	281,
@@ -349,6 +355,8 @@ static const int32_t s_InvokerIndices[169] =
 	6164,
 	6202,
 	5167,
+	6202,
+	5170,
 	6202,
 	4008,
 	1998,
@@ -395,6 +403,7 @@ static const int32_t s_InvokerIndices[169] =
 	1998,
 	1927,
 	1998,
+	1671,
 	1671,
 	1998,
 	1998,
@@ -504,9 +513,9 @@ static const int32_t s_InvokerIndices[169] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000027, { 0, 9 } },
-	{ 0x02000028, { 9, 7 } },
-	{ 0x02000029, { 16, 7 } },
+	{ 0x02000028, { 0, 9 } },
+	{ 0x02000029, { 9, 7 } },
+	{ 0x0200002A, { 16, 7 } },
 };
 extern const uint32_t g_rgctx_ObjectPool_1_t1F2BF212A972340C40F22C198E173DE436158C04;
 extern const uint32_t g_rgctx_Func_1_t53E8D82BDF180A502169FDB50C20622553C58FAE;
@@ -561,7 +570,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	169,
+	172,
 	s_methodPointers,
 	0,
 	NULL,

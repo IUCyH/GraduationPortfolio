@@ -6,7 +6,7 @@ using UnityEngine;
 public class InvokeManager : Singleton_DontDestroy<InvokeManager>
 {
     Dictionary<Action, float> invokeFunc = new Dictionary<Action, float>();
-    List<Action> reapeatingFuncList = new List<Action>();
+    List<Action> repeatingFuncList = new List<Action>();
     List<Action> funcList = new List<Action>();
     List<float> timerList = new List<float>();
 
@@ -39,7 +39,7 @@ public class InvokeManager : Singleton_DontDestroy<InvokeManager>
 
                         if (time <= timer)
                         {
-                            if (!reapeatingFuncList.Contains(func))
+                            if (!repeatingFuncList.Contains(func))
                             {
                                 CancelInvoke(func, timer);
                             }
@@ -86,7 +86,7 @@ public class InvokeManager : Singleton_DontDestroy<InvokeManager>
         invokeFunc.Add(func, time);
         timerList.Add(0f);
         
-        reapeatingFuncList.Add(func);
+        repeatingFuncList.Add(func);
     }
 
     public void CancelInvoke(Action func, float time)
