@@ -3,23 +3,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
-{    
+{
+    [SerializeField]
+    Image potraitImg;
+    [SerializeField]
+    List<Sprite> allPlayePotrait;
 
     [SerializeField]
     TalkManager talkManager;
     
     [SerializeField]
-    Animator potraitAnim;
-
-    [SerializeField]
-    Image potraitImg;
-    [SerializeField]
-    Sprite prevPotrait;
-
-    [SerializeField]
-    List<Sprite> allPlayerSprites;
-    [SerializeField]
-    Sprite playerSprite;
+    Animator potraitAnim;  
 
     [SerializeField]
     int talkIndex;
@@ -43,8 +37,11 @@ public class GameManager : Singleton<GameManager>
     public void SetPlayer(int playerID)
     {
         playerNumber = playerID;
-        //playerSprite = allPlayerSprites[playerNumber];
+        //playerSprite = allPlayePotrait[playerNumber];
     }
 
-    
+    public void SetPotrait(int id)
+    {
+        potraitImg.sprite = allPlayePotrait[id];
+    }
 }

@@ -8,9 +8,9 @@ public class PlayerCollision : MonoBehaviour
     bool isCollisiontNPC;
 
     void Update()
-    {
+    {        
         if (Input.GetKeyDown(KeyCode.E) && isCollisiontNPC)
-        {
+        {           
             TalkManager.Instance.Action();
         }
     }
