@@ -90,6 +90,15 @@ namespace Script
                         if (canAdd && !string.IsNullOrEmpty(line))
                         {
                             script.Add(line);
+
+                            var splitResult = line.Split('_');
+                            for(int i = 0; i < splitResult[0].Length; i++)
+                            {
+                                if(splitResult[0][i] == ' ')
+                                {
+                                    splitResult[0].Remove(i, 1);
+                                }
+                            }
                         }
                     }
                 }

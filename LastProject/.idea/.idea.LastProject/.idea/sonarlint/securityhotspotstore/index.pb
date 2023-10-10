@@ -11,8 +11,6 @@ b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
 `
 0Assets/01_Scripts/Game/Player/PlayerCollision.cs,1\7\1733bf182b9526544c06d89ec13888c6c7057d38
-Z
-*Assets/01_Scripts/Game/Npc/TalkIManager.cs,9\4\9474fef78cd203262b763b425fad6f9b90040cd4
 \
 ,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b
 W

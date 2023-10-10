@@ -7,8 +7,6 @@ Z
 *Assets/01_Scripts/Game/Chapter/IChapter.cs,1\2\12d4e668458cfd980d986eab8b3d9a773cef54dc
 b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
-Z
-*Assets/01_Scripts/Game/Npc/TalkIManager.cs,9\4\9474fef78cd203262b763b425fad6f9b90040cd4
 h
 8Assets/01_Scripts/Data/DataTable/CharacterScriptTable.cs,b\3\b34f349ab43b8defa683286d07f8d0e63c0f3d1b
 `
