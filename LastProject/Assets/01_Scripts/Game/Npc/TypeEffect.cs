@@ -29,7 +29,7 @@ public class TypeEffect : MonoBehaviour
 
     void Awake()
     {
-        orderOfEffecting = EventManager.Instance.AddFunc(() => Effecting());
+        orderOfEffecting = InvokeManager.Instance.AddFunc(() => Effecting());
     }
 
     public void SetMsg(string msg)
@@ -39,7 +39,7 @@ public class TypeEffect : MonoBehaviour
             msgText.text = targetMsg;
 
             EffectEnd();
-            EventManager.Instance.CancelAllInvoke();         
+            InvokeManager.Instance.CancelAllInvoke();         
         }
         else
         {
@@ -59,7 +59,7 @@ public class TypeEffect : MonoBehaviour
 
         isAnim = true;
 
-        EventManager.Instance.Invoke(orderOfEffecting, interval);
+        InvokeManager.Instance.Invoke(orderOfEffecting, interval);
     }
 
     void Effecting()
@@ -79,7 +79,7 @@ public class TypeEffect : MonoBehaviour
         
         index++;
 
-        EventManager.Instance.Invoke(orderOfEffecting, interval);
+        InvokeManager.Instance.Invoke(orderOfEffecting, interval);
     }
 
     void EffectEnd()

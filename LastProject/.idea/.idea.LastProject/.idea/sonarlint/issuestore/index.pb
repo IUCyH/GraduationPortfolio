@@ -3,20 +3,14 @@ T
 $Assets/01_Scripts/Utill/Singleton.cs,0\5\05e0893d449423bde616b9c27b7a9f104e57ad60
 N
 Assets/01_Scripts/Data/Data.cs,d\0\d0332d87100b45876c60fcc09b27c02fbef7f649
-_
-/Assets/01_Scripts/Title/Manager/TitleManager.cs,9\a\9a747ddd1716498a99b0c5b12018ffc8302200e0
 ]
 -Assets/01_Scripts/Game/Manager/GameManager.cs,7\9\790ec6787b63153e424677e7d76be74c40a0a271
 U
 %Assets/01_Scripts/Data/DataManager.cs,c\3\c3a6cf9d96e064a4072a439ab8a3ca59721b60aa
 Z
 *Assets/01_Scripts/Game/Chapter/IChapter.cs,1\2\12d4e668458cfd980d986eab8b3d9a773cef54dc
-Y
-)Assets/01_Scripts/Etc/SceneLoadManager.cs,c\1\c100c01216e3bcbb005c8d44a58549bcfc367859
 b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
-X
-(Assets/01_Scripts/Game/Npc/TypeEffect.cs,d\2\d2932809b4550ff76b95fef6a0a2659ab3b7163f
 Z
 *Assets/01_Scripts/Game/Npc/TalkIManager.cs,9\4\9474fef78cd203262b763b425fad6f9b90040cd4
 h
@@ -41,5 +35,3 @@ e
 -Assets/01_Scripts/Game/Player/PlayerCamera.cs,d\b\db532414833675f0c5cdf217ad3e1ea6bb649588
 _
 /Assets/01_Scripts/Game/Player/PlayerMovement.cs,8\2\82a34b4b19ac9edb5bd0e95e15d2151e814542de
-U
-%Assets/01_Scripts/Etc/EventManager.cs,f\9\f9a775a1ef9580990a6d281008132389fae4b931

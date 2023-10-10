@@ -30,8 +30,6 @@ public class TitleManager : Singleton<TitleManager>
         }
         
         SoundManager.Instance.PlayBGM(BGM.Title);
-        var order = EventManager.Instance.AddFunc(() => Debug.Log("Test Invoke"));
-        EventManager.Instance.Invoke(order, 2f);
     }
 
     protected override void OnStart()

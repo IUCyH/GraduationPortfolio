@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventManager : Singleton_DontDestroy<EventManager>
+public class InvokeManager : Singleton_DontDestroy<InvokeManager>
 {
     Dictionary<Action, float> invokeFunc = new Dictionary<Action, float>();
     List<Action> funcList = new List<Action>();
