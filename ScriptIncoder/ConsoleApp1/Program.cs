@@ -10,18 +10,20 @@ namespace Script
         {
             Console.WriteLine("폴더 경로 입력 (Scripts 폴더 속성 들어가서 위치 부분 전체 복사)");
             string defaultPath = Console.ReadLine();
+            Console.WriteLine("플레이어 아이디 입력(형식 : Player_(id))");
+            string targetPlayerID = Console.ReadLine();
             List<string> script = new List<string>();
             List<string> playerName = new List<string> { "신영", "지은", "재환" };
             List<string> playerID = new List<string> { "00", "01", "02" };
             List<string> explanations = new List<string> { "NA", "VO", "FB", "BIF" };
-            DirectoryInfo directory = new DirectoryInfo(defaultPath + @"\" + "Scripts");
+            DirectoryInfo directory = new DirectoryInfo(defaultPath + @"\" + "Scripts" + @"\" + targetPlayerID);
 
             int count = directory.GetFiles().Length;
 
             for (int i = 0; i < count; i++)
             {
-                string path = string.Format(@"{0}\Scripts\Chapter{1:00}.txt", defaultPath, i + 1);
-                string path2 = string.Format(@"{0}\Scripts\Edit\Chapter{1:00}.txt", defaultPath, i + 1);
+                string path = string.Format(@"{0}\Scripts\{1}\Chapter{2:00}.txt", defaultPath, targetPlayerID, i + 1);
+                string path2 = string.Format(@"{0}\Scripts\Edit\{1}\Chapter{2:00}.txt", defaultPath, targetPlayerID, i + 1);
                 StreamReader streamReader = new StreamReader(path);
                 StreamWriter streamWriter = new StreamWriter(path2);
 
