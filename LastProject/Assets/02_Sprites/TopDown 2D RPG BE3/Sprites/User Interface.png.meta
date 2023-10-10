@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 2f90eb840bd0cf4438d49759bc08d718
+guid: 1c9bc0d104c01934da10d4333b9dc48b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740792752860969874
-    second: TopDown_NPC_0
+      213: -4827201375843143100
+    second: Panel White
   - first:
-      213: -5383561740659237547
-    second: TopDown_NPC_1
+      213: 4229574389047005653
+    second: Panel Black
   - first:
-      213: -5184345850046446626
-    second: TopDown_NPC_2
+      213: -6578267993364069794
+    second: Button Accept
   - first:
-      213: -6778634467473319316
-    second: TopDown_NPC_3
+      213: -4296635770777405670
+    second: Talk Cursor
   - first:
-      213: -1940738496428130850
-    second: Luna 0
+      213: 8117750489508839553
+    second: Button Up
   - first:
-      213: -6131185593638097393
-    second: Luna 1
+      213: -1582703761720647702
+    second: Button Down
   - first:
-      213: 5084661014962647745
-    second: Ludo 0
+      213: 6342293345636278915
+    second: Button Left
   - first:
-      213: -4896452150530583312
-    second: Ludo 1
+      213: -8667803144176668281
+    second: Button Right
+  - first:
+      213: 3420474935965269878
+    second: Button Back
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -72,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -160,13 +163,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Luna 0
+      name: Panel White
       rect:
         serializedVersion: 2
         x: 0
-        y: 51
-        width: 16
-        height: 16
+        y: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddb976be9c1115e0800000000000000
-      internalID: -1940738496428130850
+      spriteID: 442b79d9ce5520db0800000000000000
+      internalID: -4827201375843143100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luna 1
+      name: Panel Black
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 16
+        x: 33
+        y: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0e653fdf27a9eaa0800000000000000
-      internalID: -6131185593638097393
+      spriteID: 5d19c326f7772ba30800000000000000
+      internalID: 4229574389047005653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 0
+      name: Button Accept
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 16
-        height: 16
+        x: 66
+        y: 25
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +219,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c23020e048509640800000000000000
-      internalID: 5084661014962647745
+      spriteID: e52863afc1c45b4a0800000000000000
+      internalID: -6578267993364069794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 1
+      name: Talk Cursor
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 25
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a177391f7884f54c0800000000000000
+      internalID: -4296635770777405670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Up
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +261,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f45deb26be4c0cb0800000000000000
-      internalID: -4896452150530583312
+      spriteID: 1808d6e7f0b08a070800000000000000
+      internalID: 8117750489508839553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Down
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef57f1705b190ae0800000000000000
+      internalID: -1582703761720647702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Left
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38269f7e13a540850800000000000000
+      internalID: 6342293345636278915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Right
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781f550e6f6c5b780800000000000000
+      internalID: -8667803144176668281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button Back
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f3651f4d7f77f20800000000000000
+      internalID: 3420474935965269878
       vertices: []
       indices: 
       edges: []
@@ -246,7 +354,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5b09594aa39374849bb4f0395b4a5347
+    spriteID: 87f44f085389b674e8a064f2e9320eee
     internalID: 0
     vertices: []
     indices: 
@@ -254,10 +362,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ludo 0: 5084661014962647745
-      Ludo 1: -4896452150530583312
-      Luna 0: -1940738496428130850
-      Luna 1: -6131185593638097393
+      Button Accept: -6578267993364069794
+      Button Back: 3420474935965269878
+      Button Down: -1582703761720647702
+      Button Left: 6342293345636278915
+      Button Right: -8667803144176668281
+      Button Up: 8117750489508839553
+      Panel Black: 4229574389047005653
+      Panel White: -4827201375843143100
+      Talk Cursor: -4296635770777405670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

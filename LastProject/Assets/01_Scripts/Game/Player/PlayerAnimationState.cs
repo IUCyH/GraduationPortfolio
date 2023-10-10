@@ -8,7 +8,8 @@ public class PlayerAnimationState : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        currentState = "player_Idle";
+        ChangeAnimationState("player_DownIdle");
+        Debug.Log(currentState);
     }
 
     public void ChangeAnimationState(string newState)
@@ -28,27 +29,36 @@ public class PlayerAnimationState : MonoBehaviour
     }
 
     void Update()
-    {
+    {       
         bool up = Input.GetKey(KeyCode.W);
         bool down = Input.GetKey(KeyCode.S);
         bool left = Input.GetKey(KeyCode.A);
         bool right = Input.GetKey(KeyCode.D);
 
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            ChangeAnimationState("Player_UpIdle");
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            ChangeAnimationState("Player_DownIdle");
+        }
         if (up)
         {
             if (left) ChangeAnimationState("Player_LeftUp");
             else if (right) ChangeAnimationState("Player_RightUp");
-            else ChangeAnimationState("Player_Up");
-        }
+            else  ChangeAnimationState("Player_Up");
+            
+        }       
         else if (down)
         {
             if (left) ChangeAnimationState("Player_LeftDown");
             else if (right) ChangeAnimationState("Player_RightDown");
-            else ChangeAnimationState("Player_Down");
+            else if (down) ChangeAnimationState("Player_DownWalk");
+            else ChangeAnimationState("Player_DownIdle");
         }
         else if (left) ChangeAnimationState("Player_Left");
         else if (right) ChangeAnimationState("Player_Right");
-        else ChangeAnimationState("Player_Idle");
 
     }
 }
