@@ -15,8 +15,6 @@ h
 0Assets/01_Scripts/Game/Player/PlayerCollision.cs,1\7\1733bf182b9526544c06d89ec13888c6c7057d38
 \
 ,Assets/01_Scripts/Game/Chapter/Chpater_01.cs,3\d\3d33694ebe3efb7ce770469fa98168b7c293db2b
-e
-5Assets/01_Scripts/Title/SelectWindows/SelectPlayer.cs,d\9\d9d8e63087d02b07b88b441e70954dcc249b5349
 W
 'Assets/01_Scripts/Sound/SoundManager.cs,3\2\32fdf044208058ff73624ce131061edeabfdfb40
 `
