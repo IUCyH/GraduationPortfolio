@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class CharacterPortraitTable
 {
-    static Dictionary<string, Sprite> table;
+    static Dictionary<string, Sprite> table = new Dictionary<string, Sprite>();
 
     static CharacterPortraitTable()
     {
