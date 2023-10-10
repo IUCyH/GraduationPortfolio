@@ -5,8 +5,6 @@ N
 Assets/01_Scripts/Data/Data.cs,d\0\d0332d87100b45876c60fcc09b27c02fbef7f649
 Z
 *Assets/01_Scripts/Game/Chapter/IChapter.cs,1\2\12d4e668458cfd980d986eab8b3d9a773cef54dc
-h
-8Assets/01_Scripts/Data/DataTable/CharacterScriptTable.cs,b\3\b34f349ab43b8defa683286d07f8d0e63c0f3d1b
 b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
 `

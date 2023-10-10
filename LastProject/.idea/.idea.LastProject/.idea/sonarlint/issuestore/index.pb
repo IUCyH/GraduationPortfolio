@@ -7,8 +7,6 @@ Z
 *Assets/01_Scripts/Game/Chapter/IChapter.cs,1\2\12d4e668458cfd980d986eab8b3d9a773cef54dc
 b
 2Assets/01_Scripts/Game/Manager/GameStoryManager.cs,9\2\92a0c32bd01c185c4df1c3bc2dde4fe4f941a2f6
-h
-8Assets/01_Scripts/Data/DataTable/CharacterScriptTable.cs,b\3\b34f349ab43b8defa683286d07f8d0e63c0f3d1b
 `
 0Assets/01_Scripts/Game/Player/PlayerCollision.cs,1\7\1733bf182b9526544c06d89ec13888c6c7057d38
 \
