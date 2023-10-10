@@ -35,6 +35,13 @@ public class TitleManager : Singleton<TitleManager>
     protected override void OnStart()
     {
         ShowOrHideExitButtonAndQuitButton();
+
+#if UNITY_EDITOR
+        Debug.unityLogger.logEnabled = true;
+#else
+        Debug.unityLogger.logEnabled = false;
+#endif
+        Application.targetFrameRate = 60;
     }
 
     void Update()

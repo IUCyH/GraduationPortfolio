@@ -31,6 +31,21 @@ extern void CharacterDataTable__cctor_mC6579588824F8EA0A10DA8D50D8262352FE1D2F1 
 extern void CharacterDataTable_GetInfo_mBD05E580545CF5E65FE43C829282C2E7B2BE9980 (void);
 extern void CharacterScriptTable__cctor_m4D92E755795001ADAFDFEAD4A5F3579A97F76624 (void);
 extern void CharacterScriptTable_GetScript_mF9A12654BCDDDA0E9F1052D2C1C41A34FB3A192D (void);
+extern void InvokeManager_OnStart_m16A7DFE328CFF52B8DA4E6FE65F0FEAB1A10575C (void);
+extern void InvokeManager_Coroutine_Update_m29F1312C9096BA93D5406F92ECF2BF6BBD92BA92 (void);
+extern void InvokeManager_AddFunc_m473C2CEC7A6816730E1098335FE9E385D1F5AEC7 (void);
+extern void InvokeManager_Invoke_mB31900DE8899B0D248C11A4E67FB84AC8449EC7C (void);
+extern void InvokeManager_InvokeRepeating_m46F02E98E4F05B6CD52B683D57B4231ED22A8ADD (void);
+extern void InvokeManager_CancelInvoke_mF13DBF8CE49367987AB9B131142EACEC3D46CA75 (void);
+extern void InvokeManager_CancelInvoke_mBB9FEDA0C9B7FE60554CF7B3545D5221A66D2E21 (void);
+extern void InvokeManager_CancelAllInvoke_mF70C18BDA000CDF1B3BBA93900EF827CBF046298 (void);
+extern void InvokeManager__ctor_m63271A46DAF39AB9A69CE4682989A47ADAC83F9D (void);
+extern void U3CCoroutine_UpdateU3Ed__6__ctor_mEF536E4BCDFC0B51C99895C5145C213F7DAB5858 (void);
+extern void U3CCoroutine_UpdateU3Ed__6_System_IDisposable_Dispose_mCD3DB5C21B6B4E04663C2B5AC4484DD106554613 (void);
+extern void U3CCoroutine_UpdateU3Ed__6_MoveNext_m26E814B84EEEC9BF5E19B97C99AC8D70D4516A03 (void);
+extern void U3CCoroutine_UpdateU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m729030FC418C01865956E60F57D73DC3C2CE15FA (void);
+extern void U3CCoroutine_UpdateU3Ed__6_System_Collections_IEnumerator_Reset_mC74FB4DA523E33E1DCD38AFED57F074AE6A008A3 (void);
+extern void U3CCoroutine_UpdateU3Ed__6_System_Collections_IEnumerator_get_Current_mB926F638BEDEAFCF9012C20272CCE2C266EB7050 (void);
 extern void SceneLoadManager_OnStart_mE92F134ED8757834351537FADC8EE37F88B3C8D1 (void);
 extern void SceneLoadManager_Load_mA5D560A6F63A211115144AB796C7E656EB4828C4 (void);
 extern void SceneLoadManager_Update_mDF5878C4F58561D9A5487F1F34B4A4C85392E699 (void);
@@ -71,11 +86,13 @@ extern void TalkManager_CallScanObject_m9291E57431D3A667ED7707B46C510DD9E3074015
 extern void TalkManager__ctor_m2B3D268D01DE06514487F4E6B2FB188599316680 (void);
 extern void TalkObjects_InitializeID_mEF865E2997ADC3DA7F9BA2690093484BA12DA4F8 (void);
 extern void TalkObjects__ctor_mFA666232606257DFE16ABB31E6BD9271C3DE8842 (void);
+extern void TypeEffect_Awake_mA1385D9252293577DB28B080A1D9AEFECE707582 (void);
 extern void TypeEffect_SetMsg_mB18BEC8DB5F65E0194BF374B36D4028D69294B3F (void);
 extern void TypeEffect_EffectStart_m9170453506EBF6A0E2A5F9B4386089D0DC10A1A5 (void);
 extern void TypeEffect_Effecting_m15B936D6C8400DEAD4C0F7CB5AE63F1C346D3DAC (void);
 extern void TypeEffect_EffectEnd_m20FE416BB3023C6AB6FBB00595107EBB943CA239 (void);
 extern void TypeEffect__ctor_mC2297E36FE9BB774A7D3743F2E4594C2BD6B815E (void);
+extern void TypeEffect_U3CAwakeU3Eb__10_0_m79D5C0C8FCA70CBFE88BDD0A7C3385C297E4C291 (void);
 extern void PlayerAnimationState_Start_m80614CD9D48E8117DFEE5CFD52715FB495F477E2 (void);
 extern void PlayerAnimationState_ChangeAnimationState_m92A2181F0D5A8095F27B2581D5C2C75A5E612ABB (void);
 extern void PlayerAnimationState_Update_m9E3A14A57F2CCBAFE407606C0F2FA05936946AF9 (void);
@@ -141,7 +158,7 @@ extern void SelectPlayer_UpdatePlayerInfo_m625D4F20E42A4ABAE05B759141479FD0D4B22
 extern void SelectPlayer__ctor_m3FC2A930D17341A9B96844144A61EF992CC620A6 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[152] = 
+static Il2CppMethodPointer s_methodPointers[169] = 
 {
 	PlayerData__ctor_mDD79CC7712EAF325215F97832BFE3403DF47DFA8,
 	CharacterInfo__ctor_mC08452A35AFDC7F4E2421CA3BD8E0825B4CA0D13,
@@ -162,6 +179,21 @@ static Il2CppMethodPointer s_methodPointers[152] =
 	CharacterDataTable_GetInfo_mBD05E580545CF5E65FE43C829282C2E7B2BE9980,
 	CharacterScriptTable__cctor_m4D92E755795001ADAFDFEAD4A5F3579A97F76624,
 	CharacterScriptTable_GetScript_mF9A12654BCDDDA0E9F1052D2C1C41A34FB3A192D,
+	InvokeManager_OnStart_m16A7DFE328CFF52B8DA4E6FE65F0FEAB1A10575C,
+	InvokeManager_Coroutine_Update_m29F1312C9096BA93D5406F92ECF2BF6BBD92BA92,
+	InvokeManager_AddFunc_m473C2CEC7A6816730E1098335FE9E385D1F5AEC7,
+	InvokeManager_Invoke_mB31900DE8899B0D248C11A4E67FB84AC8449EC7C,
+	InvokeManager_InvokeRepeating_m46F02E98E4F05B6CD52B683D57B4231ED22A8ADD,
+	InvokeManager_CancelInvoke_mF13DBF8CE49367987AB9B131142EACEC3D46CA75,
+	InvokeManager_CancelInvoke_mBB9FEDA0C9B7FE60554CF7B3545D5221A66D2E21,
+	InvokeManager_CancelAllInvoke_mF70C18BDA000CDF1B3BBA93900EF827CBF046298,
+	InvokeManager__ctor_m63271A46DAF39AB9A69CE4682989A47ADAC83F9D,
+	U3CCoroutine_UpdateU3Ed__6__ctor_mEF536E4BCDFC0B51C99895C5145C213F7DAB5858,
+	U3CCoroutine_UpdateU3Ed__6_System_IDisposable_Dispose_mCD3DB5C21B6B4E04663C2B5AC4484DD106554613,
+	U3CCoroutine_UpdateU3Ed__6_MoveNext_m26E814B84EEEC9BF5E19B97C99AC8D70D4516A03,
+	U3CCoroutine_UpdateU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m729030FC418C01865956E60F57D73DC3C2CE15FA,
+	U3CCoroutine_UpdateU3Ed__6_System_Collections_IEnumerator_Reset_mC74FB4DA523E33E1DCD38AFED57F074AE6A008A3,
+	U3CCoroutine_UpdateU3Ed__6_System_Collections_IEnumerator_get_Current_mB926F638BEDEAFCF9012C20272CCE2C266EB7050,
 	SceneLoadManager_OnStart_mE92F134ED8757834351537FADC8EE37F88B3C8D1,
 	SceneLoadManager_Load_mA5D560A6F63A211115144AB796C7E656EB4828C4,
 	SceneLoadManager_Update_mDF5878C4F58561D9A5487F1F34B4A4C85392E699,
@@ -204,11 +236,13 @@ static Il2CppMethodPointer s_methodPointers[152] =
 	TalkManager__ctor_m2B3D268D01DE06514487F4E6B2FB188599316680,
 	TalkObjects_InitializeID_mEF865E2997ADC3DA7F9BA2690093484BA12DA4F8,
 	TalkObjects__ctor_mFA666232606257DFE16ABB31E6BD9271C3DE8842,
+	TypeEffect_Awake_mA1385D9252293577DB28B080A1D9AEFECE707582,
 	TypeEffect_SetMsg_mB18BEC8DB5F65E0194BF374B36D4028D69294B3F,
 	TypeEffect_EffectStart_m9170453506EBF6A0E2A5F9B4386089D0DC10A1A5,
 	TypeEffect_Effecting_m15B936D6C8400DEAD4C0F7CB5AE63F1C346D3DAC,
 	TypeEffect_EffectEnd_m20FE416BB3023C6AB6FBB00595107EBB943CA239,
 	TypeEffect__ctor_mC2297E36FE9BB774A7D3743F2E4594C2BD6B815E,
+	TypeEffect_U3CAwakeU3Eb__10_0_m79D5C0C8FCA70CBFE88BDD0A7C3385C297E4C291,
 	PlayerAnimationState_Start_m80614CD9D48E8117DFEE5CFD52715FB495F477E2,
 	PlayerAnimationState_ChangeAnimationState_m92A2181F0D5A8095F27B2581D5C2C75A5E612ABB,
 	PlayerAnimationState_Update_m9E3A14A57F2CCBAFE407606C0F2FA05936946AF9,
@@ -296,7 +330,7 @@ static Il2CppMethodPointer s_methodPointers[152] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[152] = 
+static const int32_t s_InvokerIndices[169] = 
 {
 	1998,
 	281,
@@ -317,6 +351,21 @@ static const int32_t s_InvokerIndices[152] =
 	5167,
 	6202,
 	4008,
+	1998,
+	1939,
+	1477,
+	1022,
+	1022,
+	1059,
+	1022,
+	1998,
+	1998,
+	1671,
+	1998,
+	1899,
+	1939,
+	1998,
+	1939,
 	1998,
 	1011,
 	1998,
@@ -359,7 +408,9 @@ static const int32_t s_InvokerIndices[152] =
 	1998,
 	1671,
 	1998,
+	1998,
 	1682,
+	1998,
 	1998,
 	1998,
 	1998,
@@ -453,9 +504,9 @@ static const int32_t s_InvokerIndices[152] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[3] = 
 {
-	{ 0x02000025, { 0, 9 } },
-	{ 0x02000026, { 9, 7 } },
-	{ 0x02000027, { 16, 7 } },
+	{ 0x02000027, { 0, 9 } },
+	{ 0x02000028, { 9, 7 } },
+	{ 0x02000029, { 16, 7 } },
 };
 extern const uint32_t g_rgctx_ObjectPool_1_t1F2BF212A972340C40F22C198E173DE436158C04;
 extern const uint32_t g_rgctx_Func_1_t53E8D82BDF180A502169FDB50C20622553C58FAE;
@@ -510,7 +561,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	152,
+	169,
 	s_methodPointers,
 	0,
 	NULL,
