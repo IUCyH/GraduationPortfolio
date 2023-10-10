@@ -12,8 +12,10 @@ public class TalkManager : Singleton<TalkManager>
     PlayerMovement playerMovement;
 
     [SerializeField]
-    Animator talkPanel;  
+    Animator talkPanel;
 
+    string prevPortraitID;
+    
     int talkIndex;
 
     bool isAction;
@@ -43,29 +45,14 @@ public class TalkManager : Singleton<TalkManager>
             talkIndex = 0;
             return;//강제 종료(함수 실행 안함)
         }
-
-        int id = 0;
-
+        
         if (isNpc)
-        {          
-            if (talkData.StartsWith("지은_"))
-            {
-                id = 0;
-            }
-            else if (talkData.StartsWith("신영_"))
-            {
-                id = 1;
-            }
-            else if (talkData.StartsWith("재환_"))
-            {
-                id = 2;
-            }
-
-            GameManager.Instance.SetPotrait(id);
+        {
             var result = talkData.Split('_');
             Debug.Log(talkData);
             typeEffect.SetMsg(result.Length > 1 ? result[1] : result[0]);
             
+            GameManager.Instance.SetPotrait(result[0]);
         }
 
         isAction = true;

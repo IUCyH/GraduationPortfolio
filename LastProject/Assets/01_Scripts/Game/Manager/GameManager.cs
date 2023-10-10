@@ -6,8 +6,6 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField]
     Image potraitImg;
-    [SerializeField]
-    List<Sprite> allPlayePotrait;
 
     [SerializeField]
     TalkManager talkManager;
@@ -40,8 +38,9 @@ public class GameManager : Singleton<GameManager>
         //playerSprite = allPlayePotrait[playerNumber];
     }
 
-    public void SetPotrait(int id)
+    public void SetPotrait(string id)
     {
-        potraitImg.sprite = allPlayePotrait[id];
+        var portrait = CharacterPortraitTable.GetPortraitSprite(id);
+        potraitImg.sprite = portrait;
     }
 }

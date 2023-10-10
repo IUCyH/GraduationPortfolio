@@ -19,7 +19,7 @@ public static class CharacterPortraitTable
     public static Sprite GetPortraitSprite(string id)
     {
         if (!table.ContainsKey(id)) return null;
-
+        
         return table[id];
     }
 }
