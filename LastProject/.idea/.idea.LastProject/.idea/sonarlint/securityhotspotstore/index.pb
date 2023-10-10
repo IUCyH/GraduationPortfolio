@@ -3,8 +3,6 @@ T
 $Assets/01_Scripts/Utill/Singleton.cs,0\5\05e0893d449423bde616b9c27b7a9f104e57ad60
 N
 Assets/01_Scripts/Data/Data.cs,d\0\d0332d87100b45876c60fcc09b27c02fbef7f649
-]
--Assets/01_Scripts/Game/Manager/GameManager.cs,7\9\790ec6787b63153e424677e7d76be74c40a0a271
 Z
 *Assets/01_Scripts/Game/Chapter/IChapter.cs,1\2\12d4e668458cfd980d986eab8b3d9a773cef54dc
 h
@@ -29,7 +27,5 @@ _
 /Assets/Resources/Scripts/Player01/Chapter01.txt,6\2\62adf42ac69128287027978efb4415202d5b43a5
 _
 /Assets/01_Scripts/Game/Player/PlayerMovement.cs,8\2\82a34b4b19ac9edb5bd0e95e15d2151e814542de
-]
--Assets/01_Scripts/Game/Player/PlayerCamera.cs,d\b\db532414833675f0c5cdf217ad3e1ea6bb649588
 e
 5Assets/01_Scripts/Game/Player/PlayerAnimationState.cs,d\a\daa50a95c221031bc1c0f8e7aff9b279e2a79727
