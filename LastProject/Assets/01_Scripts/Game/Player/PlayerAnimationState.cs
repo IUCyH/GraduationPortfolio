@@ -9,7 +9,6 @@ public class PlayerAnimationState : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         ChangeAnimationState("player_DownIdle");
-        Debug.Log(currentState);
     }
 
     public void ChangeAnimationState(string newState)
@@ -54,8 +53,7 @@ public class PlayerAnimationState : MonoBehaviour
         {
             if (left) ChangeAnimationState("Player_LeftDown");
             else if (right) ChangeAnimationState("Player_RightDown");
-            else if (down) ChangeAnimationState("Player_DownWalk");
-            else ChangeAnimationState("Player_DownIdle");
+            else ChangeAnimationState("Player_DownWalk");
         }
         else if (left) ChangeAnimationState("Player_Left");
         else if (right) ChangeAnimationState("Player_Right");
